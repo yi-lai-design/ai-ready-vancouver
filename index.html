@@ -322,6 +322,13 @@
   .field textarea { resize: vertical; min-height: 84px; }
   .contact-card .btn { width: 100%; justify-content: center; margin-top: 6px; }
   .contact-note { font-size: 0.8rem; color: var(--slate-soft); text-align: center; margin-top: 14px; }
+  .contact-card.success-state {
+    text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px;
+  }
+  .contact-card.success-state .success-icon { color: var(--good); font-size: 44px; margin-bottom: 6px; }
+  .contact-card.success-state h3 { font-size: 1.2rem; margin: 0; }
+  .contact-card.success-state p { color: var(--slate); margin: 0; font-size: 0.95rem; }
+  .btn[disabled] { opacity: 0.7; cursor: default; }
 
   /* ---------- FAQ ---------- */
   .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
@@ -386,11 +393,12 @@
   <div class="bar">
     <span class="wordmark"><span class="dot flag" aria-hidden="true">🇨🇦</span>AI Ready</span>
     <nav class="links">
-      <a href="#how">How it works</a>
-      <a href="#example">A real example</a>
-      <a href="#faq">FAQ</a>
+      <a href="#how" data-i18n="nav.how">How it works</a>
+      <a href="#example" data-i18n="nav.example">A real example</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
     </nav>
-    <a class="btn solid" href="#contact">Get your free check</a>
+    <button type="button" class="lang-toggle" id="langToggle" aria-label="Passer au français">FR</button>
+    <a class="btn solid" href="#contact" data-i18n="cta.getcheck">Get your free check</a>
   </div>
 </header>
 
@@ -453,12 +461,12 @@
       </div>
       <div class="step-card">
         <span class="step-num icon">fact_check</span>
-        <h3>I run the AI audit</h3>
+        <h3>We run the AI audit</h3>
         <p>Real checks for whether AI assistants like ChatGPT, Gemini, and Claude can actually find and read your page. No guessing involved.</p>
       </div>
       <div class="step-card">
         <span class="step-num icon">mail</span>
-        <h3>I send you the result</h3>
+        <h3>We send you the result</h3>
         <p>Your real score, in plain English, and what it would take to fix. No account, no software to buy.</p>
       </div>
     </div>
@@ -503,7 +511,7 @@
 <section class="tight reveal">
   <div class="wrap">
     <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">checklist</span>What's actually being measured</span></div>
-    <h2 class="two-tone"><span class="l1">These are real checks.</span><span class="l2">Not something I invented.</span></h2>
+    <h2 class="two-tone"><span class="l1">These are real checks.</span><span class="l2">Not something we invented.</span></h2>
     <p class="section-sub">Search engines have checked page speed and usability for years. In 2026 a new question got added: can an AI actually use this page? It just counts what passes, like a home inspection, not a percentage.</p>
     <div class="checks">
       <div class="check"><span class="num icon">description</span><h3>A summary AI can read</h3><p>A small file telling AI tools what your business does, instead of making them guess.</p></div>
@@ -519,7 +527,7 @@
   <div class="wrap">
     <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">insights</span>Why it actually matters</span></div>
     <h2 class="two-tone"><span class="l1">This isn't just a score.</span><span class="l2">It's who gets found.</span></h2>
-    <p class="section-sub" style="margin-bottom:32px;">Across 24 well-reviewed Vancouver businesses I checked, 19 failed at least part of this.</p>
+    <p class="section-sub" style="margin-bottom:32px;">Across 24 well-reviewed Vancouver businesses we checked, 19 failed at least part of this.</p>
     <div class="before-after">
       <div class="ba-card fail">
         <span class="tag">Fails the check</span>
@@ -552,11 +560,11 @@
       </details>
       <details class="faq-item">
         <summary>Is this actually free?<span class="plus"></span></summary>
-        <div class="a">Yes, no card, no catch. This project is brand new, so right now every check is free while I'm still getting it off the ground. That might not last forever, but it will for you.</div>
+        <div class="a">Yes, no card, no catch. This project is brand new, so right now every check is free while we're still getting it off the ground. That might not last forever, but it will for you.</div>
       </details>
       <details class="faq-item">
         <summary>Do I have to hire you to fix anything?<span class="plus"></span></summary>
-        <div class="a">No. The report is yours to use with me, someone else, or nobody at all.</div>
+        <div class="a">No. The report is yours to use with us, someone else, or nobody at all.</div>
       </details>
     </div>
   </div>
@@ -577,24 +585,29 @@
     <div class="contact-wrap">
       <form class="contact-card" id="checkForm">
         <div class="field">
-          <label for="bizName">Business name</label>
-          <input type="text" id="bizName" name="bizName" required placeholder="e.g. Miller Plumbing">
+          <label for="bizName" data-i18n="form.name.label">Business name</label>
+          <input type="text" id="bizName" name="bizName" required placeholder="e.g. Miller Plumbing" data-i18n-placeholder="form.name.ph">
         </div>
         <div class="field">
-          <label for="bizSite">Website</label>
-          <input type="url" id="bizSite" name="bizSite" required placeholder="yourbusiness.ca">
+          <label for="bizSite" data-i18n="form.site.label">Website</label>
+          <input type="url" id="bizSite" name="bizSite" required placeholder="yourbusiness.ca" data-i18n-placeholder="form.site.ph">
         </div>
         <div class="field">
-          <label for="bizEmail">Your email</label>
-          <input type="email" id="bizEmail" name="bizEmail" required placeholder="you@yourbusiness.ca">
+          <label for="bizEmail" data-i18n="form.email.label">Your email</label>
+          <input type="email" id="bizEmail" name="bizEmail" required placeholder="you@yourbusiness.ca" data-i18n-placeholder="form.email.ph">
         </div>
         <div class="field">
-          <label for="bizNote">Anything else? (optional)</label>
-          <textarea id="bizNote" name="bizNote" placeholder="Nothing required here."></textarea>
+          <label for="bizNote" data-i18n="form.note.label">Anything else? (optional)</label>
+          <textarea id="bizNote" name="bizNote" placeholder="Nothing required here." data-i18n-placeholder="form.note.ph"></textarea>
         </div>
-        <button type="submit" class="btn solid">Send me my free check</button>
+        <button type="submit" class="btn solid" id="checkFormSubmit" data-i18n="form.submit">Send Request</button>
       </form>
-      <p class="contact-note">This opens an email to me with your details filled in, nothing is submitted automatically.</p>
+      <div class="contact-card success-state" id="checkFormSuccess" hidden>
+        <span class="icon success-icon">check_circle</span>
+        <h3 data-i18n="form.success.title">Request sent</h3>
+        <p data-i18n="form.success.body">Please allow up to 24 hours to get a response.</p>
+      </div>
+      <p class="contact-note" data-i18n="form.note">Sent directly to us, nothing opens on your device.</p>
     </div>
   </div>
 </section>
@@ -648,10 +661,43 @@
     data: {
       labels: ['2026'],
       datasets: [
-        { label: 'Automated (bots, crawlers, AI)', data: [57.5], backgroundColor: '#001c2e', borderRadius: 6 },
-        { label: 'People', data: [42.5], backgroundColor: '#c9d6de', borderRadius: 6 }
+        {
+          label: 'Automated (bots, crawlers, AI)', data: [57.5], borderRadius: 6,
+          backgroundColor: (c) => {
+            const { chart } = c;
+            if (!chart.chartArea) return '#001c2e';
+            const g = chart.ctx.createLinearGradient(chart.chartArea.left, 0, chart.chartArea.right, 0);
+            g.addColorStop(0, '#001c2e');
+            g.addColorStop(1, '#0074ff');
+            return g;
+          }
+        },
+        {
+          label: 'People', data: [42.5], borderRadius: 6,
+          backgroundColor: (c) => {
+            const { chart } = c;
+            if (!chart.chartArea) return '#c9d6de';
+            const g = chart.ctx.createLinearGradient(chart.chartArea.left, 0, chart.chartArea.right, 0);
+            g.addColorStop(0, '#c9d6de');
+            g.addColorStop(1, '#e6edf1');
+            return g;
+          }
+        }
       ]
     },
+    plugins: [{
+      id: 'barGlow',
+      beforeDatasetDraw(chart, args) {
+        if (args.index === 0) {
+          chart.ctx.save();
+          chart.ctx.shadowColor = 'rgba(0, 116, 255, 0.5)';
+          chart.ctx.shadowBlur = 16;
+        }
+      },
+      afterDatasetDraw(chart, args) {
+        if (args.index === 0) chart.ctx.restore();
+      }
+    }],
     options: {
       indexAxis: 'y',
       responsive: true, maintainAspectRatio: false,
@@ -667,6 +713,8 @@
   });
 
   const checkForm = document.getElementById('checkForm');
+  const checkFormSuccess = document.getElementById('checkFormSuccess');
+  const checkFormSubmit = document.getElementById('checkFormSubmit');
   if (checkForm) {
     checkForm.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -675,18 +723,43 @@
       const bizEmail = document.getElementById('bizEmail').value.trim();
       const bizNote = document.getElementById('bizNote').value.trim();
 
-      const subject = 'Free AI-readiness check: ' + bizName;
-      const bodyLines = [
-        'Business: ' + bizName,
-        'Website: ' + bizSite,
-        'Reply-to email: ' + bizEmail,
-        '',
-        bizNote || '(no additional notes)'
-      ];
-      const mailto = 'mailto:hello@aireadyvan.ca'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(bodyLines.join('\n'));
-      window.location.href = mailto;
+      const mailtoFallback = () => {
+        const subject = 'Free AI-readiness check: ' + bizName;
+        const bodyLines = [
+          'Business: ' + bizName,
+          'Website: ' + bizSite,
+          'Reply-to email: ' + bizEmail,
+          '',
+          bizNote || '(no additional notes)'
+        ];
+        const mailto = 'mailto:hello@aireadyvan.ca'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(bodyLines.join('\n'));
+        window.location.href = mailto;
+      };
+
+      checkFormSubmit.disabled = true;
+
+      fetch('https://formsubmit.co/ajax/hello@aireadyvan.ca', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'Free AI-readiness check: ' + bizName,
+          Business: bizName,
+          Website: bizSite,
+          'Reply-to email': bizEmail,
+          Notes: bizNote || '(no additional notes)'
+        })
+      })
+        .then((res) => { if (!res.ok) throw new Error('bad response'); })
+        .then(() => {
+          checkForm.hidden = true;
+          checkFormSuccess.hidden = false;
+        })
+        .catch(() => {
+          checkFormSubmit.disabled = false;
+          mailtoFallback();
+        });
     });
   }
 </script>
