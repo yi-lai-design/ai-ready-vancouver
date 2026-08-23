@@ -1,0 +1,20 @@
+# AI Ready Vancouver
+
+> A free, independent project that checks whether well-reviewed Vancouver small businesses can actually be found and understood by AI assistants like ChatGPT, Gemini, and Claude, not just traditional search engines.
+
+## What this is
+
+AI Ready Vancouver runs a real AI-readiness audit (based on Google's Lighthouse Agentic Browsing scoring, plus direct checks against AI assistants) on Vancouver businesses, then sends a free, plain-English report. It is not a sales pitch: the report is free to use with this project, a competitor, or nobody at all.
+
+## Who runs this
+
+Built and operated by two tech professionals based in Vancouver, Canada, as a hands-on way to understand how AI agents read the web.
+
+## Key pages
+
+- Homepage (https://aireadyvan.ca/): explains the audit, walks through a real example, and includes a free-check request form
+- Contact section (https://aireadyvan.ca/#contact): businesses can request their own free AI-readiness check
+
+## Contact
+
+hello@aireadyvan.ca

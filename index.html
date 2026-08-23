@@ -6,6 +6,17 @@
 <title>AI Ready Vancouver</title>
 <meta name="description" content="A free tool checking whether Vancouver small-business websites can be read by AI search agents.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%87%A8%F0%9F%87%A6%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AI Ready Vancouver",
+  "url": "https://aireadyvan.ca/",
+  "description": "A free, independent project checking whether Vancouver's best-reviewed businesses can be read by AI.",
+  "email": "hello@aireadyvan.ca",
+  "areaServed": { "@type": "City", "name": "Vancouver" }
+}
+</script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0&display=block');
@@ -120,6 +131,13 @@
   nav.links a { color: var(--slate); text-decoration: none; }
   nav.links a:hover { color: var(--navy); }
   @media (min-width: 720px) { nav.links { display: flex; } }
+  .lang-toggle {
+    font-family: "Google Sans", sans-serif; font-weight: 700; font-size: 0.8rem;
+    color: var(--navy); background: var(--card); border: 1px solid var(--line);
+    border-radius: 999px; padding: 7px 14px; cursor: pointer; letter-spacing: 0.02em;
+    transition: border-color 0.18s ease, color 0.18s ease;
+  }
+  .lang-toggle:hover { border-color: var(--accent-1); color: var(--accent-1); }
   .btn {
     display: inline-flex; align-items: center; gap: 6px;
     font-family: "Google Sans", sans-serif; font-weight: 700; font-size: 0.9rem;
@@ -334,6 +352,7 @@
   .field textarea { resize: vertical; min-height: 84px; }
   .contact-card .btn { width: 100%; justify-content: center; margin-top: 6px; }
   .contact-note { font-size: 0.8rem; color: var(--slate-soft); text-align: center; margin-top: 14px; }
+  .contact-card.success-state[hidden] { display: none; }
   .contact-card.success-state {
     text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px;
   }
@@ -372,13 +391,6 @@
 
   /* ---------- Final CTA ---------- */
   .final-cta { text-align: center; padding-top: 40px; }
-  .big-cta {
-    margin: 34px auto 0; padding: 22px 44px; font-size: 1.2rem; border-radius: 999px;
-    box-shadow: 0 16px 34px -12px rgba(0, 116, 255, 0.55);
-  }
-  .big-cta .icon { font-size: 22px; transition: transform 0.18s ease; }
-  .big-cta:hover .icon { transform: translateX(4px); }
-  @media (prefers-reduced-motion: reduce) { .big-cta:hover .icon { transform: none; } }
   .final-checklist {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 30px;
     max-width: 540px; margin: 30px auto 34px; text-align: left;
@@ -417,40 +429,40 @@
 <div class="hero">
   <div class="blob top"></div>
   <div class="wrap inner">
-    <span class="pill"><span class="icon icon-sm arrow">trending_up</span> 57.5% of web traffic is automated now</span>
-    <h1 class="two-tone">
+    <span class="pill" data-i18n="hero.pill"><span class="icon icon-sm arrow">trending_up</span> 57.5% of web traffic is automated now</span>
+    <h1 class="two-tone" data-i18n="hero.h1">
       <span class="l1">Bots visit websites</span>
-      <span class="l2">more than people now.</span>
+      <span class="l2">more than people now</span>
     </h1>
-    <p class="question">Is your website AI-legible?</p>
+    <p class="question" data-i18n="hero.question">Is your website AI-legible?</p>
     <div class="cta-row">
-      <a class="btn solid" href="#contact">Get your free check</a>
-      <a class="btn outline" href="#example">See a real example</a>
+      <a class="btn solid" href="#contact" data-i18n="cta.getcheck">Get your free check</a>
+      <a class="btn outline" href="#example" data-i18n="hero.seeexample">See a real example</a>
     </div>
 
     <div class="traffic-card">
       <div class="head">
-        <h3>Who's actually visiting websites, 2026</h3>
+        <h3 data-i18n="hero.chart.title">Who's actually visiting websites, 2026</h3>
         <span>Cloudflare Radar</span>
       </div>
       <div class="traffic-chart-wrap"><canvas id="trafficChart"></canvas></div>
       <div class="traffic-legend">
-        <div class="item"><span class="sw" style="background:var(--navy)"></span>Automated (bots, crawlers, AI) <b>&nbsp;57.5%</b></div>
-        <div class="item"><span class="sw" style="background:#c9d6de"></span>People <b>&nbsp;42.5%</b></div>
+        <div class="item" data-i18n="hero.chart.legend1"><span class="sw" style="background:var(--navy)"></span>Automated (bots, crawlers, AI) <b>&nbsp;57.5%</b></div>
+        <div class="item" data-i18n="hero.chart.legend2"><span class="sw" style="background:#c9d6de"></span>People <b>&nbsp;42.5%</b></div>
       </div>
     </div>
 
     <div class="source-strip">
-      <div class="src"><b>53%+</b><span>of web traffic is bots, up from 51% last year <i>— Imperva 2026 Bad Bot Report</i></span></div>
-      <div class="src"><b>68%</b><span>of Google searches now end without a single click to any website <i>— Search Engine Land, 2026</i></span></div>
+      <div class="src" data-i18n="hero.src1"><b>53%+</b><span>of web traffic is bots, up from 51% last year <i>— Imperva 2026 Bad Bot Report</i></span></div>
+      <div class="src" data-i18n="hero.src2"><b>68%</b><span>of Google searches now end without a single click to any website <i>— Search Engine Land, 2026</i></span></div>
     </div>
   </div>
 </div>
 
 <section class="tight reveal">
   <div class="wrap">
-    <h2 class="two-tone"><span class="l1">Want your business visible</span><span class="l2">to these AI?</span></h2>
-    <p class="section-sub">This is who your customers already ask first.</p>
+    <h2 class="two-tone" data-i18n="ai.h2"><span class="l1">Want your business visible</span><span class="l2">to these AI?</span></h2>
+    <p class="section-sub" data-i18n="ai.sub">This is who your customers already ask first.</p>
     <div class="ai-badges">
       <span class="ai-badge" style="--ai-c:#10a37f"><span class="icon">forum</span>ChatGPT</span>
       <span class="ai-badge" style="--ai-c:#4285f4"><span class="icon">auto_awesome</span>Gemini</span>
@@ -463,23 +475,23 @@
 
 <section class="tight reveal" id="how">
   <div class="wrap">
-    <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">search</span>How the check works</span></div>
-    <h2 class="two-tone"><span class="l1">Three steps, that's it.</span><span class="l2">Then you just wait for an email.</span></h2>
+    <div class="eyebrow"><span class="pill" data-i18n="how.eyebrow"><span class="icon icon-sm arrow">search</span>How the check works</span></div>
+    <h2 class="two-tone" data-i18n="how.h2"><span class="l1">Three steps, that's it</span><span class="l2">Then you just wait for an email</span></h2>
     <div class="steps">
       <div class="step-card">
         <span class="step-num icon">edit_note</span>
-        <h3>You fill in the form</h3>
-        <p>Your business name, website, and email. Takes under a minute, nothing to install.</p>
+        <h3 data-i18n="how.step1.h3">You fill in the form</h3>
+        <p data-i18n="how.step1.p">Your business name, website, and email. Takes under a minute, nothing to install.</p>
       </div>
       <div class="step-card">
         <span class="step-num icon">fact_check</span>
-        <h3>We run the AI audit</h3>
-        <p>Real checks for whether AI assistants like ChatGPT, Gemini, and Claude can actually find and read your page. No guessing involved.</p>
+        <h3 data-i18n="how.step2.h3">We run the AI audit</h3>
+        <p data-i18n="how.step2.p">Real checks for whether AI assistants like ChatGPT, Gemini, and Claude can actually find and read your page. No guessing involved.</p>
       </div>
       <div class="step-card">
         <span class="step-num icon">mail</span>
-        <h3>We send you the result</h3>
-        <p>Your real score, in plain English, and what it would take to fix. No account, no software to buy.</p>
+        <h3 data-i18n="how.step3.h3">We send you the result</h3>
+        <p data-i18n="how.step3.p">Your real score, in plain English, and what it would take to fix. No account, no software to buy.</p>
       </div>
     </div>
   </div>
@@ -487,34 +499,34 @@
 
 <section id="example" class="reveal">
   <div class="wrap">
-    <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">storefront</span>One real example</span></div>
-    <h2 class="two-tone"><span class="l1">Perfect SEO.</span><span class="l2">Invisible to AI.</span></h2>
+    <div class="eyebrow"><span class="pill" data-i18n="ex.eyebrow"><span class="icon icon-sm arrow">storefront</span>One real example</span></div>
+    <h2 class="two-tone" data-i18n="ex.h2"><span class="l1">Perfect SEO</span><span class="l2">Invisible to AI</span></h2>
     <div class="feature-visual" style="max-width:820px;margin:0 auto;">
-      <p class="who-line">A Vancouver auto repair shop. <b>4.7 stars, close to 300 reviews, independently owned.</b></p>
+      <p class="who-line" data-i18n="ex.who">A Vancouver auto repair shop. <b>4.7 stars, close to 300 reviews, independently owned.</b></p>
 
       <div class="example-split">
         <div class="quiet-scores">
-          <span class="qs-label">Everything else checks out</span>
+          <span class="qs-label" data-i18n="ex.qslabel">Everything else checks out</span>
           <div class="qs-row">
-            <div class="qs-item" style="--bg-tint: var(--warn-bg); --fg-tint: var(--warn);"><span class="qs-n">49</span><span class="qs-l">Performance</span></div>
-            <div class="qs-item"><span class="qs-n">87</span><span class="qs-l">Accessibility</span></div>
-            <div class="qs-item"><span class="qs-n">96</span><span class="qs-l">Best Practices</span></div>
-            <div class="qs-item"><span class="qs-n">100</span><span class="qs-l">SEO, perfect score</span></div>
+            <div class="qs-item" style="--bg-tint: var(--warn-bg); --fg-tint: var(--warn);"><span class="qs-n">49</span><span class="qs-l" data-i18n="ex.perf">Performance</span></div>
+            <div class="qs-item"><span class="qs-n">87</span><span class="qs-l" data-i18n="ex.a11y">Accessibility</span></div>
+            <div class="qs-item"><span class="qs-n">96</span><span class="qs-l" data-i18n="ex.bp">Best Practices</span></div>
+            <div class="qs-item"><span class="qs-n">100</span><span class="qs-l" data-i18n="ex.seo">SEO, perfect score</span></div>
           </div>
         </div>
         <div class="fail-hero">
           <span class="fail-big">0<span class="slash">/</span>2</span>
-          <span class="fail-label">AI Readiness checks passed</span>
+          <span class="fail-label" data-i18n="ex.faillabel">AI Readiness checks passed</span>
         </div>
       </div>
 
       <div class="impact-wrap">
-        <span class="impact-label">In plain terms:</span>
+        <span class="impact-label" data-i18n="ex.impactlabel">In plain terms:</span>
         <div class="impact-bar">
-          <div class="impact-seg findable" style="width:42.5%">Findable by people</div>
-          <div class="impact-seg invisible" style="width:57.5%">Not reachable by AI search</div>
+          <div class="impact-seg findable" style="width:42.5%" data-i18n="ex.findable">Findable by people</div>
+          <div class="impact-seg invisible" style="width:57.5%" data-i18n="ex.invisible">Not reachable by AI search</div>
         </div>
-        <span class="impact-note">That's the same 57.5% / 42.5% split from the top of this page. <b>A great SEO score doesn't change whether AI search can actually read the page.</b></span>
+        <span class="impact-note" data-i18n="ex.impactnote">That's the same 57.5% / 42.5% split from the top of this page. <b>A great SEO score doesn't change whether AI search can actually read the page.</b></span>
       </div>
     </div>
   </div>
@@ -522,39 +534,39 @@
 
 <section class="tight reveal">
   <div class="wrap">
-    <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">checklist</span>What's actually being measured</span></div>
-    <h2 class="two-tone"><span class="l1">These are real checks.</span><span class="l2">Not something we invented.</span></h2>
-    <p class="section-sub">Search engines have checked page speed and usability for years. In 2026 a new question got added: can an AI actually use this page? It just counts what passes, like a home inspection, not a percentage.</p>
+    <div class="eyebrow"><span class="pill" data-i18n="checks.eyebrow"><span class="icon icon-sm arrow">checklist</span>What's actually being measured</span></div>
+    <h2 class="two-tone" data-i18n="checks.h2"><span class="l1">These are real checks</span><span class="l2">Not something we invented</span></h2>
+    <p class="section-sub" data-i18n="checks.sub">Search engines have checked page speed and usability for years. In 2026 a new question got added: can an AI actually use this page? It just counts what passes, like a home inspection, not a percentage.</p>
     <div class="checks">
-      <div class="check"><span class="num icon">description</span><h3>A summary AI can read</h3><p>A small file telling AI tools what your business does, instead of making them guess.</p></div>
-      <div class="check"><span class="num icon">label</span><h3>Buttons a computer can find</h3><p>Clear labels behind the scenes, so your phone number and hours are easy to find.</p></div>
-      <div class="check"><span class="num icon">push_pin</span><h3>A page that doesn't jump around</h3><p>Content that stays put, so nothing confuses a computer reading it.</p></div>
-      <div class="check"><span class="num icon">event_available</span><h3>Booking without the clicking</h3><p>A newer way for an AI to get a quote or book you directly.</p></div>
+      <div class="check"><span class="num icon">description</span><h3 data-i18n="checks.1.h3">A summary AI can read</h3><p data-i18n="checks.1.p">A small file telling AI tools what your business does, instead of making them guess.</p></div>
+      <div class="check"><span class="num icon">label</span><h3 data-i18n="checks.2.h3">Buttons a computer can find</h3><p data-i18n="checks.2.p">Clear labels behind the scenes, so your phone number and hours are easy to find.</p></div>
+      <div class="check"><span class="num icon">push_pin</span><h3 data-i18n="checks.3.h3">A page that doesn't jump around</h3><p data-i18n="checks.3.p">Content that stays put, so nothing confuses a computer reading it.</p></div>
+      <div class="check"><span class="num icon">event_available</span><h3 data-i18n="checks.4.h3">Booking without the clicking</h3><p data-i18n="checks.4.p">A newer way for an AI to get a quote or book you directly.</p></div>
     </div>
-    <p class="cite-line">One of the sources: <a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring" target="_blank" rel="noopener">Chrome for Developers, Lighthouse Agentic Browsing scoring</a>.</p>
+    <p class="cite-line" data-i18n="checks.cite">One of the sources: <a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring" target="_blank" rel="noopener">Chrome for Developers, Lighthouse Agentic Browsing scoring</a>.</p>
   </div>
 </section>
 
 <section class="tight reveal">
   <div class="wrap">
-    <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">insights</span>Why it actually matters</span></div>
-    <h2 class="two-tone"><span class="l1">This isn't just a score.</span><span class="l2">It's who gets found.</span></h2>
-    <p class="section-sub" style="margin-bottom:32px;">Across 24 well-reviewed Vancouver businesses we checked, 19 failed at least part of this.</p>
+    <div class="eyebrow"><span class="pill" data-i18n="why.eyebrow"><span class="icon icon-sm arrow">insights</span>Why it actually matters</span></div>
+    <h2 class="two-tone" data-i18n="why.h2"><span class="l1">This isn't just a score</span><span class="l2">It's who gets found</span></h2>
+    <p class="section-sub" style="margin-bottom:32px;" data-i18n="why.sub">19 out of 24. That's how many well-reviewed Vancouver businesses we checked failed at least part of this.</p>
     <div class="before-after">
       <div class="ba-card fail">
-        <span class="tag">Fails the check</span>
+        <span class="tag" data-i18n="why.failtag">Fails the check</span>
         <ul>
-          <li><span class="ic icon icon-md">cancel</span>An AI assistant can't confirm your hours, services, or price</li>
-          <li><span class="ic icon icon-md">cancel</span>You get skipped when someone asks "who's the best near me"</li>
-          <li><span class="ic icon icon-md">cancel</span>A five-star reputation never reaches the tools people now ask first</li>
+          <li><span class="ic icon icon-md">cancel</span><span data-i18n="why.fail1">An AI assistant can't confirm your hours, services, or price</span></li>
+          <li><span class="ic icon icon-md">cancel</span><span data-i18n="why.fail2">You get skipped when someone asks "who's the best near me"</span></li>
+          <li><span class="ic icon icon-md">cancel</span><span data-i18n="why.fail3">A five-star reputation never reaches the tools people now ask first</span></li>
         </ul>
       </div>
       <div class="ba-card pass">
-        <span class="tag">Passes the check</span>
+        <span class="tag" data-i18n="why.passtag">Passes the check</span>
         <ul>
-          <li><span class="ic icon icon-md">check_circle</span>An AI assistant can read your hours, services, and booking info</li>
-          <li><span class="ic icon icon-md">check_circle</span>You show up when someone asks an AI to compare options</li>
-          <li><span class="ic icon icon-md">check_circle</span>Your real reviews reach the tools customers use to decide</li>
+          <li><span class="ic icon icon-md">check_circle</span><span data-i18n="why.pass1">An AI assistant can read your hours, services, and booking info</span></li>
+          <li><span class="ic icon icon-md">check_circle</span><span data-i18n="why.pass2">You show up when someone asks an AI to compare options</span></li>
+          <li><span class="ic icon icon-md">check_circle</span><span data-i18n="why.pass3">Your real reviews reach the tools customers use to decide</span></li>
         </ul>
       </div>
     </div>
@@ -563,20 +575,20 @@
 
 <section id="faq" class="reveal">
   <div class="wrap">
-    <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">help</span>FAQ</span></div>
-    <h2 class="two-tone"><span class="l1">Totally fair</span><span class="l2">questions to ask.</span></h2>
+    <div class="eyebrow"><span class="pill" data-i18n="faq.eyebrow"><span class="icon icon-sm arrow">help</span>FAQ</span></div>
+    <h2 class="two-tone" data-i18n="faq.h2"><span class="l1">Questions</span><span class="l2">you might be asking</span></h2>
     <div class="faq-list">
       <details class="faq-item">
-        <summary>Why are you doing this?<span class="plus"></span></summary>
-        <div class="a">My partner and I are tech professionals, and the best way we know to actually understand a shift like this is to do the work, not just read about it. Running these checks for free, on real businesses instead of theory, is how we're learning.</div>
+        <summary><span data-i18n="faq.q1">Why are you doing this?</span><span class="plus"></span></summary>
+        <div class="a" data-i18n="faq.a1">My partner and I are tech professionals, and the best way we know to actually understand a shift like this is to do the work, not just read about it. Running these checks for free, on real businesses instead of theory, is how we're learning.</div>
       </details>
       <details class="faq-item">
-        <summary>Is this actually free?<span class="plus"></span></summary>
-        <div class="a">Yes, no card, no catch. This project is brand new, so right now every check is free while we're still getting it off the ground. That might not last forever, but it will for you.</div>
+        <summary><span data-i18n="faq.q2">Is this actually free?</span><span class="plus"></span></summary>
+        <div class="a" data-i18n="faq.a2">Yes, no card, no catch. This project is brand new, so right now every check is free while we're still getting it off the ground. That might not last forever, but it will for you.</div>
       </details>
       <details class="faq-item">
-        <summary>Do I have to hire you to fix anything?<span class="plus"></span></summary>
-        <div class="a">No. The report is yours to use with us, someone else, or nobody at all.</div>
+        <summary><span data-i18n="faq.q3">Do I have to hire you to fix anything?</span><span class="plus"></span></summary>
+        <div class="a" data-i18n="faq.a3">No. The report is yours to use with us, someone else, or nobody at all.</div>
       </details>
     </div>
   </div>
@@ -585,13 +597,12 @@
 <section class="final-cta reveal" id="contact">
   <div class="blob cta"></div>
   <div class="wrap">
-    <h2 class="two-tone"><span class="l1">Find out if your site</span><span class="l2">is AI-legible.</span></h2>
-    <a class="btn solid big-cta" href="#bizName">Get your free check<span class="icon icon-md">arrow_forward</span></a>
+    <h2 class="two-tone" data-i18n="final.h2"><span class="l1">Find out if your site</span><span class="l2">is AI-legible</span></h2>
     <div class="final-checklist">
-      <div class="item"><span class="check-dot icon icon-sm">check</span>Your real AI score</div>
-      <div class="item"><span class="check-dot icon icon-sm">check</span>Plain-English breakdown</div>
-      <div class="item"><span class="check-dot icon icon-sm">check</span>No sales pitch</div>
-      <div class="item"><span class="check-dot icon icon-sm">check</span>No obligation, ever</div>
+      <div class="item"><span class="check-dot icon icon-sm">check</span><span data-i18n="final.item1">Your real AI score</span></div>
+      <div class="item"><span class="check-dot icon icon-sm">check</span><span data-i18n="final.item2">Plain-English breakdown</span></div>
+      <div class="item"><span class="check-dot icon icon-sm">check</span><span data-i18n="final.item3">No sales pitch</span></div>
+      <div class="item"><span class="check-dot icon icon-sm">check</span><span data-i18n="final.item4">No obligation, ever</span></div>
     </div>
 
     <div class="contact-wrap">
@@ -628,19 +639,19 @@
   <div class="wrap">
     <div class="brand-col">
       <span class="wordmark"><span class="dot flag" aria-hidden="true">🇨🇦</span>AI Ready</span>
-      <p>A free, independent project checking whether Vancouver's best-reviewed businesses can be read by AI.</p>
-      <p class="made-in">Made with intention in Vancouver, Canada.</p>
+      <p data-i18n="footer.blurb">A free, independent project checking whether Vancouver's best-reviewed businesses can be read by AI.</p>
+      <p class="made-in" data-i18n="footer.madein">Made with intention in Vancouver, Canada.</p>
     </div>
     <div class="col">
-      <h4>On this page</h4>
-      <a href="#how">How it works</a>
-      <a href="#example">A real example</a>
-      <a href="#faq">FAQ</a>
+      <h4 data-i18n="footer.onpage">On this page</h4>
+      <a href="#how" data-i18n="nav.how">How it works</a>
+      <a href="#example" data-i18n="nav.example">A real example</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
     </div>
     <div class="col">
-      <h4>Get in touch</h4>
-      <a href="#contact">Get your free check</a>
-      <a href="https://pagespeed.web.dev" target="_blank" rel="noopener">Run it yourself</a>
+      <h4 data-i18n="footer.getintouch">Get in touch</h4>
+      <a href="#contact" data-i18n="cta.getcheck">Get your free check</a>
+      <a href="https://pagespeed.web.dev" target="_blank" rel="noopener" data-i18n="footer.runityourself">Run it yourself</a>
     </div>
   </div>
 </footer>
@@ -826,14 +837,220 @@
     }
   }
 
-  const bigCta = document.querySelector('.big-cta');
-  const bizNameField = document.getElementById('bizName');
-  if (bigCta && bizNameField) {
-    bigCta.addEventListener('click', function (e) {
-      e.preventDefault();
-      bizNameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      window.setTimeout(() => bizNameField.focus({ preventScroll: true }), 450);
+</script>
+
+<script>
+  const I18N = {
+    en: {
+      'nav.how': 'How it works',
+      'nav.example': 'A real example',
+      'nav.faq': 'FAQ',
+      'cta.getcheck': 'Get your free check',
+      'cta.getcheck.arrow': 'Get your free check<span class="icon icon-md">arrow_forward</span>',
+      'hero.pill': '<span class="icon icon-sm arrow">trending_up</span> 57.5% of web traffic is automated now',
+      'hero.h1': '<span class="l1">Bots visit websites</span><span class="l2">more than people now</span>',
+      'hero.question': 'Is your website AI-legible?',
+      'hero.seeexample': 'See a real example',
+      'hero.chart.title': "Who's actually visiting websites, 2026",
+      'hero.chart.legend1': '<span class="sw" style="background:var(--navy)"></span>Automated (bots, crawlers, AI) <b>&nbsp;57.5%</b>',
+      'hero.chart.legend2': '<span class="sw" style="background:#c9d6de"></span>People <b>&nbsp;42.5%</b>',
+      'hero.src1': '<b>53%+</b><span>of web traffic is bots, up from 51% last year <i>— Imperva 2026 Bad Bot Report</i></span>',
+      'hero.src2': '<b>68%</b><span>of Google searches now end without a single click to any website <i>— Search Engine Land, 2026</i></span>',
+      'ai.h2': '<span class="l1">Want your business visible</span><span class="l2">to these AI?</span>',
+      'ai.sub': 'This is who your customers already ask first.',
+      'how.eyebrow': '<span class="icon icon-sm arrow">search</span>How the check works',
+      'how.h2': '<span class="l1">Three steps, that\'s it</span><span class="l2">Then you just wait for an email</span>',
+      'how.step1.h3': 'You fill in the form',
+      'how.step1.p': 'Your business name, website, and email. Takes under a minute, nothing to install.',
+      'how.step2.h3': 'We run the AI audit',
+      'how.step2.p': 'Real checks for whether AI assistants like ChatGPT, Gemini, and Claude can actually find and read your page. No guessing involved.',
+      'how.step3.h3': 'We send you the result',
+      'how.step3.p': 'Your real score, in plain English, and what it would take to fix. No account, no software to buy.',
+      'ex.eyebrow': '<span class="icon icon-sm arrow">storefront</span>One real example',
+      'ex.h2': '<span class="l1">Perfect SEO</span><span class="l2">Invisible to AI</span>',
+      'ex.who': 'A Vancouver auto repair shop. <b>4.7 stars, close to 300 reviews, independently owned.</b>',
+      'ex.qslabel': 'Everything else checks out',
+      'ex.perf': 'Performance',
+      'ex.a11y': 'Accessibility',
+      'ex.bp': 'Best Practices',
+      'ex.seo': 'SEO, perfect score',
+      'ex.faillabel': 'AI Readiness checks passed',
+      'ex.impactlabel': 'In plain terms:',
+      'ex.findable': 'Findable by people',
+      'ex.invisible': 'Not reachable by AI search',
+      'ex.impactnote': "That's the same 57.5% / 42.5% split from the top of this page. <b>A great SEO score doesn't change whether AI search can actually read the page.</b>",
+      'checks.eyebrow': '<span class="icon icon-sm arrow">checklist</span>What\'s actually being measured',
+      'checks.h2': '<span class="l1">These are real checks</span><span class="l2">Not something we invented</span>',
+      'checks.sub': 'Search engines have checked page speed and usability for years. In 2026 a new question got added: can an AI actually use this page? It just counts what passes, like a home inspection, not a percentage.',
+      'checks.1.h3': 'A summary AI can read',
+      'checks.1.p': 'A small file telling AI tools what your business does, instead of making them guess.',
+      'checks.2.h3': 'Buttons a computer can find',
+      'checks.2.p': 'Clear labels behind the scenes, so your phone number and hours are easy to find.',
+      'checks.3.h3': "A page that doesn't jump around",
+      'checks.3.p': 'Content that stays put, so nothing confuses a computer reading it.',
+      'checks.4.h3': 'Booking without the clicking',
+      'checks.4.p': 'A newer way for an AI to get a quote or book you directly.',
+      'checks.cite': 'One of the sources: <a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring" target="_blank" rel="noopener">Chrome for Developers, Lighthouse Agentic Browsing scoring</a>.',
+      'why.eyebrow': '<span class="icon icon-sm arrow">insights</span>Why it actually matters',
+      'why.h2': '<span class="l1">This isn\'t just a score</span><span class="l2">It\'s who gets found</span>',
+      'why.sub': "19 out of 24. That's how many well-reviewed Vancouver businesses we checked failed at least part of this.",
+      'why.failtag': 'Fails the check',
+      'why.fail1': "An AI assistant can't confirm your hours, services, or price",
+      'why.fail2': 'You get skipped when someone asks "who\'s the best near me"',
+      'why.fail3': 'A five-star reputation never reaches the tools people now ask first',
+      'why.passtag': 'Passes the check',
+      'why.pass1': 'An AI assistant can read your hours, services, and booking info',
+      'why.pass2': 'You show up when someone asks an AI to compare options',
+      'why.pass3': 'Your real reviews reach the tools customers use to decide',
+      'faq.eyebrow': '<span class="icon icon-sm arrow">help</span>FAQ',
+      'faq.h2': '<span class="l1">Questions</span><span class="l2">you might be asking</span>',
+      'faq.q1': 'Why are you doing this?',
+      'faq.a1': "My partner and I are tech professionals, and the best way we know to actually understand a shift like this is to do the work, not just read about it. Running these checks for free, on real businesses instead of theory, is how we're learning.",
+      'faq.q2': 'Is this actually free?',
+      'faq.a2': "Yes, no card, no catch. This project is brand new, so right now every check is free while we're still getting it off the ground. That might not last forever, but it will for you.",
+      'faq.q3': 'Do I have to hire you to fix anything?',
+      'faq.a3': 'No. The report is yours to use with us, someone else, or nobody at all.',
+      'final.h2': '<span class="l1">Find out if your site</span><span class="l2">is AI-legible</span>',
+      'final.item1': 'Your real AI score',
+      'final.item2': 'Plain-English breakdown',
+      'final.item3': 'No sales pitch',
+      'final.item4': 'No obligation, ever',
+      'form.name.label': 'Business name',
+      'form.name.ph': 'e.g. Miller Plumbing',
+      'form.site.label': 'Website',
+      'form.site.ph': 'yourbusiness.ca',
+      'form.email.label': 'Your email',
+      'form.email.ph': 'you@yourbusiness.ca',
+      'form.note.label': 'Anything else? (optional)',
+      'form.note.ph': 'Nothing required here.',
+      'form.submit': 'Send Request',
+      'form.success.title': 'Request sent',
+      'form.success.body': 'Please allow up to 24 hours to get a response.',
+      'form.note': 'Sent directly to us, nothing opens on your device.',
+      'footer.blurb': "A free, independent project checking whether Vancouver's best-reviewed businesses can be read by AI.",
+      'footer.madein': 'Made with intention in Vancouver, Canada.',
+      'footer.onpage': 'On this page',
+      'footer.getintouch': 'Get in touch',
+      'footer.runityourself': 'Run it yourself'
+    },
+    fr: {
+      'nav.how': 'Comment ça marche',
+      'nav.example': 'Un exemple réel',
+      'nav.faq': 'FAQ',
+      'cta.getcheck': 'Obtenez votre vérification gratuite',
+      'cta.getcheck.arrow': 'Obtenez votre vérification gratuite<span class="icon icon-md">arrow_forward</span>',
+      'hero.pill': '<span class="icon icon-sm arrow">trending_up</span> 57,5 % du trafic web est maintenant automatisé',
+      'hero.h1': '<span class="l1">Les robots visitent les sites web</span><span class="l2">plus que les gens, maintenant</span>',
+      'hero.question': "Votre site web est-il lisible par l'IA?",
+      'hero.seeexample': 'Voir un exemple réel',
+      'hero.chart.title': 'Qui visite vraiment les sites web, 2026',
+      'hero.chart.legend1': '<span class="sw" style="background:var(--navy)"></span>Automatisé (robots, explorateurs, IA) <b>&nbsp;57,5 %</b>',
+      'hero.chart.legend2': '<span class="sw" style="background:#c9d6de"></span>Personnes <b>&nbsp;42,5 %</b>',
+      'hero.src1': '<b>53 % +</b><span>du trafic web provient de robots, en hausse par rapport à 51 % l\'an dernier <i>— Imperva 2026 Bad Bot Report</i></span>',
+      'hero.src2': '<b>68 %</b><span>des recherches Google se terminent maintenant sans qu\'aucun clic ne soit fait vers un site web <i>— Search Engine Land, 2026</i></span>',
+      'ai.h2': '<span class="l1">Vous voulez que votre entreprise soit visible</span><span class="l2">pour ces IA?</span>',
+      'ai.sub': "C'est à eux que vos clients posent déjà leurs questions en premier.",
+      'how.eyebrow': '<span class="icon icon-sm arrow">search</span>Comment fonctionne la vérification',
+      'how.h2': '<span class="l1">Trois étapes, c\'est tout</span><span class="l2">Ensuite, vous attendez un courriel</span>',
+      'how.step1.h3': 'Vous remplissez le formulaire',
+      'how.step1.p': "Le nom de votre entreprise, votre site web et votre courriel. Moins d'une minute, rien à installer.",
+      'how.step2.h3': 'Nous effectuons la vérification IA',
+      'how.step2.p': "De vraies vérifications pour savoir si des assistants IA comme ChatGPT, Gemini et Claude peuvent vraiment trouver et lire votre page. Aucune supposition.",
+      'how.step3.h3': 'Nous vous envoyons le résultat',
+      'how.step3.p': "Votre vrai score, en langage clair, et ce qu'il faudrait faire pour le corriger. Aucun compte, aucun logiciel à acheter.",
+      'ex.eyebrow': '<span class="icon icon-sm arrow">storefront</span>Un exemple réel',
+      'ex.h2': '<span class="l1">SEO parfait</span><span class="l2">Invisible pour l\'IA</span>',
+      'ex.who': 'Un garage automobile à Vancouver. <b>4,7 étoiles, près de 300 avis, propriété indépendante.</b>',
+      'ex.qslabel': 'Tout le reste est en ordre',
+      'ex.perf': 'Performance',
+      'ex.a11y': 'Accessibilité',
+      'ex.bp': 'Bonnes pratiques',
+      'ex.seo': 'SEO, score parfait',
+      'ex.faillabel': 'Vérifications de préparation IA réussies',
+      'ex.impactlabel': 'En termes simples :',
+      'ex.findable': 'Trouvable par les gens',
+      'ex.invisible': 'Inaccessible à la recherche IA',
+      'ex.impactnote': "C'est le même partage 57,5 % / 42,5 % qu'en haut de cette page. <b>Un excellent score SEO ne change rien au fait que la recherche IA puisse vraiment lire la page.</b>",
+      'checks.eyebrow': '<span class="icon icon-sm arrow">checklist</span>Ce qui est vraiment mesuré',
+      'checks.h2': '<span class="l1">Ce sont de vraies vérifications</span><span class="l2">Pas quelque chose qu\'on a inventé</span>',
+      'checks.sub': "Les moteurs de recherche vérifient la vitesse et la facilité d'utilisation des pages depuis des années. En 2026, une nouvelle question s'est ajoutée : est-ce qu'une IA peut vraiment utiliser cette page? Ça compte simplement ce qui passe, comme une inspection de maison, pas un pourcentage.",
+      'checks.1.h3': "Un résumé que l'IA peut lire",
+      'checks.1.p': "Un petit fichier qui indique aux outils IA ce que fait votre entreprise, au lieu de les laisser deviner.",
+      'checks.2.h3': "Des boutons qu'un ordinateur peut trouver",
+      'checks.2.p': "Des étiquettes claires en coulisse, pour que votre numéro de téléphone et vos heures soient faciles à trouver.",
+      'checks.3.h3': 'Une page qui ne bouge pas',
+      'checks.3.p': "Un contenu qui reste stable, pour ne pas embrouiller un ordinateur qui la lit.",
+      'checks.4.h3': 'Réserver sans avoir à cliquer',
+      'checks.4.p': "Une nouvelle façon pour une IA d'obtenir un prix ou de réserver directement chez vous.",
+      'checks.cite': 'Une des sources : <a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring" target="_blank" rel="noopener">Chrome for Developers, Lighthouse Agentic Browsing scoring</a>.',
+      'why.eyebrow': '<span class="icon icon-sm arrow">insights</span>Pourquoi c\'est vraiment important',
+      'why.h2': '<span class="l1">Ce n\'est pas juste un score</span><span class="l2">C\'est qui se fait trouver</span>',
+      'why.sub': "19 sur 24. C'est le nombre d'entreprises de Vancouver bien évaluées qu'on a vérifiées qui ont échoué au moins une partie de ce test.",
+      'why.failtag': 'Échoue à la vérification',
+      'why.fail1': "Un assistant IA ne peut pas confirmer vos heures, vos services ou vos prix",
+      'why.fail2': "Vous êtes ignoré quand quelqu'un demande « qui est le meilleur près de moi »",
+      'why.fail3': "Une réputation cinq étoiles n'atteint jamais les outils que les gens consultent maintenant en premier",
+      'why.passtag': 'Réussit la vérification',
+      'why.pass1': 'Un assistant IA peut lire vos heures, vos services et vos infos de réservation',
+      'why.pass2': "Vous apparaissez quand quelqu'un demande à une IA de comparer des options",
+      'why.pass3': 'Vos vrais avis atteignent les outils que les clients utilisent pour décider',
+      'faq.eyebrow': '<span class="icon icon-sm arrow">help</span>FAQ',
+      'faq.h2': '<span class="l1">Des questions</span><span class="l2">que vous vous posez peut-être</span>',
+      'faq.q1': 'Pourquoi faites-vous ça?',
+      'faq.a1': "Mon partenaire et moi sommes des professionnels de la technologie, et la meilleure façon qu'on connaisse pour vraiment comprendre un changement comme celui-ci, c'est de faire le travail, pas juste d'en lire. Faire ces vérifications gratuitement, sur de vraies entreprises plutôt qu'en théorie, c'est comme ça qu'on apprend.",
+      'faq.q2': 'Est-ce vraiment gratuit?',
+      'faq.a2': "Oui, aucune carte, aucun piège. Ce projet est tout nouveau, alors présentement chaque vérification est gratuite pendant qu'on le met sur pied. Ça ne durera peut-être pas éternellement, mais ce sera gratuit pour vous.",
+      'faq.q3': 'Dois-je vous engager pour régler quoi que ce soit?',
+      'faq.a3': "Non. Le rapport est à vous, que vous l'utilisiez avec nous, quelqu'un d'autre, ou personne du tout.",
+      'final.h2': '<span class="l1">Découvrez si votre site</span><span class="l2">est lisible par l\'IA</span>',
+      'final.item1': 'Votre vrai score IA',
+      'final.item2': 'Une explication en langage clair',
+      'final.item3': 'Aucun argumentaire de vente',
+      'final.item4': 'Aucune obligation, jamais',
+      'form.name.label': "Nom de l'entreprise",
+      'form.name.ph': 'ex. Plomberie Miller',
+      'form.site.label': 'Site web',
+      'form.site.ph': 'votreentreprise.ca',
+      'form.email.label': 'Votre courriel',
+      'form.email.ph': 'vous@votreentreprise.ca',
+      'form.note.label': 'Autre chose? (facultatif)',
+      'form.note.ph': "Rien d'obligatoire ici.",
+      'form.submit': 'Envoyer la demande',
+      'form.success.title': 'Demande envoyée',
+      'form.success.body': 'Prévoyez jusqu\'à 24 heures pour recevoir une réponse.',
+      'form.note': "Envoyé directement chez nous, rien ne s'ouvre sur votre appareil.",
+      'footer.blurb': "Un projet gratuit et indépendant qui vérifie si les entreprises les mieux notées de Vancouver peuvent être lues par l'IA.",
+      'footer.madein': 'Conçu avec intention à Vancouver, au Canada.',
+      'footer.onpage': 'Sur cette page',
+      'footer.getintouch': 'Nous contacter',
+      'footer.runityourself': 'Essayez-le vous-même'
+    }
+  };
+
+  const langToggle = document.getElementById('langToggle');
+  if (langToggle) {
+    const applyLang = (lang) => {
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const val = I18N[lang][el.getAttribute('data-i18n')];
+        if (val !== undefined) el.innerHTML = val;
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+        const val = I18N[lang][el.getAttribute('data-i18n-placeholder')];
+        if (val !== undefined) el.setAttribute('placeholder', val);
+      });
+      document.documentElement.lang = lang;
+      langToggle.textContent = lang === 'en' ? 'FR' : 'EN';
+      langToggle.setAttribute('aria-label', lang === 'en' ? 'Passer au français' : 'Switch to English');
+      try { localStorage.setItem('aireadyvan_lang', lang); } catch (e) {}
+    };
+
+    let currentLang = 'en';
+    try { currentLang = localStorage.getItem('aireadyvan_lang') || 'en'; } catch (e) {}
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'fr' : 'en';
+      applyLang(currentLang);
     });
+    if (currentLang === 'fr') applyLang('fr');
   }
 </script>
 
