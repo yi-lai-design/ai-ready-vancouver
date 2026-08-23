@@ -159,8 +159,18 @@
 
   /* ---------- Traffic bar (hero chart) ---------- */
   .traffic-card {
-    max-width: 760px; margin: 0 auto; background: var(--card); border: 1px solid var(--line);
+    position: relative;
+    max-width: 760px; margin: 0 auto; background: var(--card);
     border-radius: 22px; padding: 30px 32px; box-shadow: var(--shadow-card); text-align: left;
+    border: 1.5px solid transparent;
+    background-image: linear-gradient(var(--card), var(--card)), linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  .traffic-card::before {
+    content: ""; position: absolute; inset: -14px; border-radius: 30px;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    filter: blur(24px); opacity: 0.5; z-index: -1;
   }
   .traffic-card .head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
   .traffic-card .head h3 { font-weight: 700; font-size: 1.05rem; margin: 0; }
