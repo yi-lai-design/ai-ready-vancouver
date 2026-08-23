@@ -266,23 +266,6 @@
   .cite-line { margin-top: 24px; font-size: 0.85rem; color: var(--slate-soft); }
   .cite-line a { color: var(--slate-soft); }
 
-  /* ---------- Simple stat row ---------- */
-  .stat-row {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px;
-    max-width: 780px; margin: 0 auto;
-  }
-  .stat-box {
-    background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 26px 20px;
-    text-align: center; box-shadow: var(--shadow-card);
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
-  }
-  .stat-box:hover { transform: translateY(-3px); box-shadow: 0 14px 28px -18px rgba(0, 28, 46, 0.28); }
-  .stat-box .stat-ic { color: var(--good); margin-bottom: 8px; }
-  .stat-box .n { font-weight: 700; font-size: 2.1rem; font-variant-numeric: tabular-nums; }
-  .stat-box .n.good { color: var(--good); }
-  .stat-box .n.critical { color: var(--critical); }
-  .stat-box .l { font-size: 0.85rem; color: var(--slate); margin-top: 4px; }
-
   /* ---------- Source strip (hero) ---------- */
   .source-strip { max-width: 760px; margin: 18px auto 0; display: flex; flex-direction: column; gap: 10px; }
   .source-strip .src {
@@ -561,18 +544,6 @@
   </div>
 </section>
 
-<section class="reveal">
-  <div class="wrap">
-    <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">bolt</span>No software, no waiting</span></div>
-    <h2 class="two-tone"><span class="l1">The whole thing takes</span><span class="l2">about two minutes.</span></h2>
-    <div class="stat-row">
-      <div class="stat-box"><span class="stat-ic icon">schedule</span><div class="n good">~2 min</div><div class="l">To run the real AI check</div></div>
-      <div class="stat-box"><span class="stat-ic icon">payments</span><div class="n good">$0</div><div class="l">Free while this is new</div></div>
-      <div class="stat-box"><span class="stat-ic icon">mail</span><div class="n good">1</div><div class="l">Email back to you with the result</div></div>
-    </div>
-  </div>
-</section>
-
 <section id="faq" class="reveal">
   <div class="wrap">
     <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">help</span>FAQ</span></div>
@@ -585,10 +556,6 @@
       <details class="faq-item">
         <summary>Is this actually free?<span class="plus"></span></summary>
         <div class="a">Yes, no card, no catch. This project is brand new, so right now every check is free while I'm still getting it off the ground. That might not last forever, but it will for you.</div>
-      </details>
-      <details class="faq-item">
-        <summary>What if I don't want my site checked?<span class="plus"></span></summary>
-        <div class="a">Just say so and I'll delete anything on file. It doesn't change your site either way.</div>
       </details>
       <details class="faq-item">
         <summary>Do I have to hire you to fix anything?<span class="plus"></span></summary>
