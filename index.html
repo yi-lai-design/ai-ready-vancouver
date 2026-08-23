@@ -665,12 +665,14 @@
       datasets: [
         {
           label: 'Automated (bots, crawlers, AI)', data: [57.5], borderRadius: 6,
+          borderColor: '#aeeaff', borderWidth: 1.5,
           backgroundColor: (c) => {
             const { chart } = c;
             if (!chart.chartArea) return '#001c2e';
             const g = chart.ctx.createLinearGradient(chart.chartArea.left, 0, chart.chartArea.right, 0);
-            g.addColorStop(0, '#001c2e');
-            g.addColorStop(1, '#0074ff');
+            g.addColorStop(0, '#0047c9');
+            g.addColorStop(0.55, '#0074ff');
+            g.addColorStop(1, '#00c2ff');
             return g;
           }
         },
@@ -690,11 +692,20 @@
     plugins: [{
       id: 'barGlow',
       beforeDatasetDraw(chart, args) {
-        if (args.index === 0) {
-          chart.ctx.save();
-          chart.ctx.shadowColor = 'rgba(0, 116, 255, 0.5)';
-          chart.ctx.shadowBlur = 16;
+        if (args.index !== 0) return;
+        const bar = chart.getDatasetMeta(0).data[0];
+        const ctx = chart.ctx;
+        if (bar) {
+          ctx.save();
+          ctx.shadowColor = 'rgba(0, 194, 255, 0.9)';
+          ctx.shadowBlur = 38;
+          ctx.fillStyle = 'rgba(0, 194, 255, 0.55)';
+          ctx.fillRect(bar.base, bar.y - bar.height / 2, bar.x - bar.base, bar.height);
+          ctx.restore();
         }
+        ctx.save();
+        ctx.shadowColor = 'rgba(0, 194, 255, 0.8)';
+        ctx.shadowBlur = 20;
       },
       afterDatasetDraw(chart, args) {
         if (args.index === 0) chart.ctx.restore();
