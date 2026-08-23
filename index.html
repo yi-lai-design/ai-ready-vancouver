@@ -294,6 +294,18 @@
   .source-strip .src b { font-weight: 700; color: var(--navy); font-size: 0.98rem; flex: none; }
   .source-strip .src i { font-style: normal; color: var(--slate-soft); }
 
+  /* ---------- AI assistant badges ---------- */
+  .ai-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px; }
+  .ai-badge {
+    display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px;
+    border-radius: 999px; background: var(--card); border: 1px solid var(--line);
+    box-shadow: 0 1px 2px rgba(0, 28, 46, 0.05); font-weight: 700; font-size: 0.95rem;
+    color: var(--navy); transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+  .ai-badge .icon { color: var(--ai-c, var(--accent-1)); font-size: 20px; }
+  .ai-badge:hover { transform: translateY(-3px); box-shadow: 0 12px 24px -14px rgba(0, 28, 46, 0.3); border-color: var(--ai-c, var(--accent-1)); }
+  @media (prefers-reduced-motion: reduce) { .ai-badge:hover { transform: none; } }
+
   /* ---------- Before / after (why it matters) ---------- */
   .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 820px; margin: 0 auto; }
   @media (max-width: 700px) { .before-after { grid-template-columns: 1fr; } }
@@ -434,6 +446,20 @@
     </div>
   </div>
 </div>
+
+<section class="tight reveal">
+  <div class="wrap">
+    <h2 class="two-tone"><span class="l1">Want your business visible</span><span class="l2">to these AI?</span></h2>
+    <p class="section-sub">This is who your customers already ask, before they ever open a map or a review site.</p>
+    <div class="ai-badges">
+      <span class="ai-badge" style="--ai-c:#10a37f"><span class="icon">forum</span>ChatGPT</span>
+      <span class="ai-badge" style="--ai-c:#4285f4"><span class="icon">auto_awesome</span>Gemini</span>
+      <span class="ai-badge" style="--ai-c:#d97757"><span class="icon">psychology</span>Claude</span>
+      <span class="ai-badge" style="--ai-c:#20808d"><span class="icon">travel_explore</span>Perplexity</span>
+      <span class="ai-badge" style="--ai-c:#0078d4"><span class="icon">smart_toy</span>Copilot</span>
+    </div>
+  </div>
+</section>
 
 <section class="tight reveal" id="how">
   <div class="wrap">
