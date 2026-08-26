@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Make Your Website Discoverable by AI (Free Checklist) | AI Ready Vancouver</title>
+<meta name="description" content="A practical, no-fluff checklist for making your website findable and understandable by ChatGPT, Gemini, Claude, and Perplexity — from a free, independent project that audits AI readiness.">
+<link rel="canonical" href="https://aireadyvan.ca/ai-discoverability-guide/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%87%A8%F0%9F%87%A6%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI Ready Vancouver">
+<meta property="og:title" content="How to Make Your Website Discoverable by AI">
+<meta property="og:description" content="A practical checklist for making your website findable and understandable by ChatGPT, Gemini, Claude, and Perplexity.">
+<meta property="og:url" content="https://aireadyvan.ca/ai-discoverability-guide/">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Make Your Website Discoverable by AI">
+<meta name="twitter:description" content="A practical checklist for making your website findable and understandable by ChatGPT, Gemini, Claude, and Perplexity.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "AI Ready Vancouver", "item": "https://aireadyvan.ca/" },
+    { "@type": "ListItem", "position": 2, "name": "How to Make Your Website Discoverable by AI", "item": "https://aireadyvan.ca/ai-discoverability-guide/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to make your website discoverable by AI",
+  "description": "A technical checklist for making a website findable, readable, and citable by AI assistants and AI search crawlers.",
+  "step": [
+    { "@type": "HowToStep", "name": "Publish an llms.txt file", "text": "Add a plain-text llms.txt file at your site root that tells AI tools what your business does, in plain language, without making them parse your HTML." },
+    { "@type": "HowToStep", "name": "Add schema.org structured data", "text": "Add JSON-LD structured data (Organization, LocalBusiness, FAQPage) so AI tools get an unambiguous, machine-readable description of who you are." },
+    { "@type": "HowToStep", "name": "Explicitly allow AI crawlers in robots.txt", "text": "Name AI crawlers such as GPTBot, ClaudeBot, and PerplexityBot in robots.txt with Allow rules, so intent to be crawled by AI is unambiguous." },
+    { "@type": "HowToStep", "name": "Make contact info machine-readable", "text": "Use real tel: links, address markup, and openingHours in structured data instead of burying hours and phone numbers in an image or a JavaScript widget." },
+    { "@type": "HowToStep", "name": "Don't hide core content behind JavaScript", "text": "Server-render or statically render your key business content, since many AI fetchers read raw HTML and never execute client-side JavaScript." },
+    { "@type": "HowToStep", "name": "Add a canonical URL and Open Graph tags", "text": "Add a canonical link and Open Graph metadata so AI tools and search engines can resolve which URL is the authoritative version of a page." },
+    { "@type": "HowToStep", "name": "Submit your site to Search Console and Bing Webmaster Tools", "text": "Verify ownership, submit your sitemap, and request indexing directly instead of waiting for organic crawl discovery." },
+    { "@type": "HowToStep", "name": "Keep your page layout stable", "text": "Avoid layout shift while the page loads, since a page that jumps around confuses machines trying to associate labels with values, not just people." }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Does this replace SEO?", "acceptedAnswer": { "@type": "Answer", "text": "No. Traditional SEO is still what gets your page ranked and found by search engines and their crawlers. AI discoverability is a related but separate layer: whether an AI assistant that already found your page can actually understand it well enough to recommend you. A site can rank perfectly and still be unreadable to AI." } },
+    { "@type": "Question", "name": "Do I need to hire a developer to do this?", "acceptedAnswer": { "@type": "Answer", "text": "Most of this checklist is a handful of small text files and HTML tags, not a rebuild. An llms.txt file, a robots.txt update, and a JSON-LD block can usually be added in under an hour by anyone comfortable editing their site's code, or by whoever manages your site." } },
+    { "@type": "Question", "name": "Will this work on Squarespace, Wix, or Shopify?", "acceptedAnswer": { "@type": "Answer", "text": "Most of these platforms let you add custom meta tags, a robots.txt override, and structured data through their SEO or code-injection settings. A few, like llms.txt, may require a static file host or a developer's help if your platform doesn't support root-level file uploads." } },
+    { "@type": "Question", "name": "How do I know if my site already passes these checks?", "acceptedAnswer": { "@type": "Answer", "text": "You can check manually (view your page source, try fetching your own homepage the way an AI tool would) or request a free AI readiness check from AI Ready Vancouver, which runs these checks for you and sends a plain-English report." } },
+    { "@type": "Question", "name": "Is any of this guaranteed to get me mentioned by ChatGPT or Perplexity?", "acceptedAnswer": { "@type": "Answer", "text": "No, and be skeptical of anyone who promises that. This checklist makes your site legible once an AI system visits it. Whether it actually gets crawled, indexed, and cited also depends on real-world authority signals like backlinks, which no on-page checklist can substitute for." } }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .checklist-num { counter-reset: step; }
+  .step-item { counter-increment: step; position: relative; padding-left: 54px; margin-bottom: 28px; }
+  .step-item::before {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 36px; height: 36px; border-radius: 11px; background: #eaf4ff; color: var(--accent-1);
+    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem;
+  }
+  .step-item h3 { margin-top: 0; }
+  .proof-strip { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px; }
+  .proof-strip a {
+    display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; border-radius: 999px;
+    background: var(--card); border: 1px solid var(--line); font-weight: 700; font-size: 0.85rem;
+    color: var(--navy); text-decoration: none; transition: border-color 0.18s ease, transform 0.18s ease;
+  }
+  .proof-strip a:hover { border-color: var(--accent-1); transform: translateY(-2px); }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="bar">
+    <a class="wordmark" href="/"><span class="dot"></span>AI Ready</a>
+    <nav class="links">
+      <a href="#checklist">The 4 checks</a>
+      <a href="#technical">Technical checklist</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn solid" href="/#contact">Free check</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="blob top"></div>
+  <div class="wrap inner">
+    <span class="pill"><span class="icon icon-sm arrow">menu_book</span> Free guide</span>
+    <h1 class="two-tone">
+      <span class="l1">How to make your website</span>
+      <span class="l2">discoverable by AI</span>
+    </h1>
+    <p class="question">A practical checklist for ChatGPT, Gemini, Claude, and Perplexity — not just Google.</p>
+    <div class="cta-row">
+      <a class="btn solid" href="#technical">See the technical checklist</a>
+      <a class="btn outline" href="/#contact">Get your free AI readiness check</a>
+    </div>
+  </div>
+</div>
+
+<section class="tight reveal">
+  <div class="wrap article-body">
+    <p class="lede">57.5% of web traffic in 2026 is automated, not people — bots, crawlers, and AI assistants (<a href="https://radar.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Radar</a>). When we ran these exact checks against 28 real, well-reviewed local businesses, every single one failed at least one of them. Most sites were built for people and search-engine crawlers. Almost none were built for the AI assistants a growing share of customers now ask first.</p>
+    <p>"AI discoverability" is the practice of making sure a website can actually be <strong>found, read, and correctly understood</strong> by AI systems — not just ranked by Google. It's a different, newer problem than SEO, and most of the fixes are small.</p>
+  </div>
+</section>
+
+<section class="tight reveal" id="checklist">
+  <div class="wrap">
+    <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">checklist</span>The foundation</span></div>
+    <h2 class="two-tone"><span class="l1">Four things AI actually checks</span><span class="l2">Before it can recommend you</span></h2>
+    <p class="section-sub">This is the same methodology <a href="/">AI Ready Vancouver</a> uses to audit real businesses, expanded here so you can check your own site by hand.</p>
+    <div class="checks">
+      <div class="check">
+        <span class="num icon">description</span>
+        <h3>A machine-readable summary</h3>
+        <p>A small file or structured data block telling AI tools what your business does, instead of making them guess from your homepage copy.</p>
+      </div>
+      <div class="check">
+        <span class="num icon">label</span>
+        <h3>Machine-findable contact info</h3>
+        <p>Your phone number, hours, and address exist as real, labeled data — not just visible text baked into an image or a JS-only widget.</p>
+      </div>
+      <div class="check">
+        <span class="num icon">push_pin</span>
+        <h3>A layout that doesn't jump</h3>
+        <p>Content stays where it's rendered, so nothing confuses a system trying to associate a label with the value next to it.</p>
+      </div>
+      <div class="check">
+        <span class="num icon">event_available</span>
+        <h3>An action, not just a phone number</h3>
+        <p>A structured way for an AI agent to get a quote or book directly, instead of the only next step being "call us."</p>
+      </div>
+    </div>
+    <p class="cite-line">One of the sources: <a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring" target="_blank" rel="noopener">Chrome for Developers, Lighthouse Agentic Browsing scoring</a>.</p>
+  </div>
+</section>
+
+<section class="reveal" id="technical">
+  <div class="wrap article-body">
+    <div class="eyebrow" style="margin-bottom: 32px;"><span class="pill"><span class="icon icon-sm arrow">code</span>The technical checklist</span></div>
+    <h2 class="two-tone"><span class="l1">Eight concrete fixes</span><span class="l2">Most take under an hour</span></h2>
+    <div class="checklist-num" style="margin-top: 48px;">
+
+      <div class="step-item">
+        <h3>1. Publish an <code>llms.txt</code> file</h3>
+        <p>llms.txt is an emerging convention: a plain-text file at your site's root that tells AI tools what your business does in plain language, without making them parse your HTML, CSS, and JavaScript to guess. Keep it short and factual.</p>
+        <pre><code># Your Business Name
+
+&gt; One sentence describing what you do and who you serve.
+
+## What this is
+A short paragraph explaining your business, services, and location.
+
+## Contact
+you@yourbusiness.com</code></pre>
+      </div>
+
+      <div class="step-item">
+        <h3>2. Add schema.org structured data</h3>
+        <p>A JSON-LD block in your page's <code>&lt;head&gt;</code> gives AI tools an unambiguous, machine-readable description of who you are, instead of relying on them to correctly interpret your visual design.</p>
+        <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Your Business Name",
+  "url": "https://yourbusiness.com/",
+  "telephone": "+1-555-555-5555",
+  "address": { "@type": "PostalAddress", "streetAddress": "123 Main St", "addressLocality": "Your City" }
+}
+&lt;/script&gt;</code></pre>
+      </div>
+
+      <div class="step-item">
+        <h3>3. Explicitly allow AI crawlers in <code>robots.txt</code></h3>
+        <p>A plain <code>User-agent: * / Allow: /</code> already covers AI crawlers by default, but naming them explicitly documents intent clearly and avoids them getting caught by a stricter rule added later.</p>
+        <pre><code>User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /</code></pre>
+      </div>
+
+      <div class="step-item">
+        <h3>4. Make contact info machine-readable</h3>
+        <p>Use a real <code>tel:</code> link, an <code>address</code> element, and <code>openingHours</code> in structured data — not a phone number baked into an image, or hours that only appear after a JavaScript widget loads.</p>
+      </div>
+
+      <div class="step-item">
+        <h3>5. Don't hide core content behind JavaScript</h3>
+        <p>Many AI fetchers read raw HTML and never execute client-side JavaScript. If your business description, pricing, or hours only render after JS runs, some AI tools never see them at all. Server-render or statically render anything that matters.</p>
+      </div>
+
+      <div class="step-item">
+        <h3>6. Add a canonical URL and Open Graph tags</h3>
+        <p>A <code>&lt;link rel="canonical"&gt;</code> tag and basic Open Graph metadata (<code>og:title</code>, <code>og:description</code>, <code>og:url</code>) help AI tools and search engines resolve which URL is the authoritative version of a page, especially if your content ever gets mirrored or shared elsewhere.</p>
+      </div>
+
+      <div class="step-item">
+        <h3>7. Submit to Search Console and Bing Webmaster Tools</h3>
+        <p>None of the above matters if the page has never been crawled. Verify ownership in <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a> and <a href="https://www.bing.com/webmasters" target="_blank" rel="noopener">Bing Webmaster Tools</a>, submit your sitemap, and use "Request Indexing" to actively ask for a crawl instead of waiting for organic discovery.</p>
+      </div>
+
+      <div class="step-item">
+        <h3>8. Keep your page layout stable</h3>
+        <p>A page that visibly shifts content around while it loads confuses both people and machines trying to associate a label with the value next to it. Reserve space for images and embeds, and avoid injecting content above the fold after the initial render.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="tight reveal">
+  <div class="wrap" style="text-align: center;">
+    <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">verified</span>We did this to our own site</span></div>
+    <h2 class="two-tone"><span class="l1">This page follows</span><span class="l2">its own checklist</span></h2>
+    <p class="section-sub">Every item above is live on aireadyvan.ca right now. Here's the proof, not just the claim:</p>
+    <div class="proof-strip">
+      <a href="/llms.txt" target="_blank" rel="noopener"><span class="icon icon-sm">description</span>/llms.txt</a>
+      <a href="/llms-full.txt" target="_blank" rel="noopener"><span class="icon icon-sm">article</span>/llms-full.txt</a>
+      <a href="/robots.txt" target="_blank" rel="noopener"><span class="icon icon-sm">smart_toy</span>/robots.txt</a>
+      <a href="/sitemap.xml" target="_blank" rel="noopener"><span class="icon icon-sm">map</span>/sitemap.xml</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="reveal">
+  <div class="wrap">
+    <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">help</span>FAQ</span></div>
+    <h2 class="two-tone"><span class="l1">Questions</span><span class="l2">you might be asking</span></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary><span>Does this replace SEO?</span><span class="plus"></span></summary>
+        <div class="a">No. Traditional SEO is still what gets your page ranked and found by search engines and their crawlers. AI discoverability is a related but separate layer: whether an AI assistant that already found your page can actually understand it well enough to recommend you. A site can rank perfectly and still be unreadable to AI.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span>Do I need to hire a developer to do this?</span><span class="plus"></span></summary>
+        <div class="a">Most of this checklist is a handful of small text files and HTML tags, not a rebuild. An llms.txt file, a robots.txt update, and a JSON-LD block can usually be added in under an hour by anyone comfortable editing their site's code, or by whoever manages your site.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span>Will this work on Squarespace, Wix, or Shopify?</span><span class="plus"></span></summary>
+        <div class="a">Most of these platforms let you add custom meta tags, a robots.txt override, and structured data through their SEO or code-injection settings. A few, like llms.txt, may require a static file host or a developer's help if your platform doesn't support root-level file uploads.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span>How do I know if my site already passes these checks?</span><span class="plus"></span></summary>
+        <div class="a">You can check manually — view your page source, or try fetching your own homepage the way an AI tool would. Or request a free AI readiness check from AI Ready Vancouver, which runs these checks for you and sends a plain-English report.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span>Is any of this guaranteed to get me mentioned by ChatGPT or Perplexity?</span><span class="plus"></span></summary>
+        <div class="a">No, and be skeptical of anyone who promises that. This checklist makes your site legible once an AI system visits it. Whether it actually gets crawled, indexed, and cited also depends on real-world authority signals like backlinks, which no on-page checklist can substitute for.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta reveal" id="contact">
+  <div class="blob cta"></div>
+  <div class="wrap">
+    <h2 class="two-tone"><span class="l1">Don't want to check</span><span class="l2">all this by hand?</span></h2>
+    <p class="section-sub" style="margin-bottom: 8px;">AI Ready Vancouver runs the same 4 core checks on your site for free and sends you a plain-English report. No sales pitch, no obligation.</p>
+    <a class="btn solid" href="/#contact" style="margin-top: 20px;">Get your free AI readiness check<span class="icon icon-md">arrow_forward</span></a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand-col">
+      <a class="wordmark" href="/"><span class="dot flag" aria-hidden="true">🇨🇦</span>AI Ready</a>
+      <p>A free, independent project checking whether Vancouver's best-reviewed businesses can be read by AI.</p>
+      <p class="made-in">Made with intention in Vancouver, Canada.</p>
+    </div>
+    <div class="col">
+      <h4>This guide</h4>
+      <a href="#checklist">The 4 checks</a>
+      <a href="#technical">Technical checklist</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="col">
+      <h4>Get in touch</h4>
+      <a href="/#contact">Get your free check</a>
+      <a href="/">Back to homepage</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const siteHeader = document.querySelector('header.top');
+  if (siteHeader) {
+    const SHRINK_RANGE = 120;
+    let ticking = false;
+    const applyProgress = () => {
+      const sp = Math.min(Math.max(window.scrollY / SHRINK_RANGE, 0), 1);
+      siteHeader.style.setProperty('--sp', sp.toFixed(3));
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const read = scrollable > 0 ? Math.min(Math.max(window.scrollY / scrollable, 0), 1) : 0;
+      siteHeader.style.setProperty('--progress', (read * 100).toFixed(2) + '%');
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (!ticking) { requestAnimationFrame(applyProgress); ticking = true; }
+    };
+    applyProgress();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+      revealEls.forEach((el) => el.classList.add('in'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      revealEls.forEach((el) => io.observe(el));
+    }
+  }
+</script>
+
+</body>
+</html>

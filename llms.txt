@@ -17,6 +17,7 @@ AI search optimization, Generative Engine Optimization (GEO), AI readiness audit
 ## Key pages
 
 - Homepage (https://aireadyvan.ca/): explains the audit, walks through a real example, and includes a free-check request form
+- AI discoverability guide (https://aireadyvan.ca/ai-discoverability-guide/): a free, general-purpose technical checklist for making any website discoverable by AI assistants and AI search crawlers, not specific to Vancouver
 - Contact section (https://aireadyvan.ca/#contact): businesses can request their own free AI-readiness check
 - Full page content (https://aireadyvan.ca/llms-full.txt): complete plain-text version of the homepage, including the 4 real checks, current audit stats, and full FAQ
 
