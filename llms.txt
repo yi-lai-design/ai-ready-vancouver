@@ -10,6 +10,10 @@ AI Ready Vancouver runs a real AI-readiness audit (based on Google's Lighthouse 
 
 Built and operated by two tech professionals based in Vancouver, Canada, as a hands-on way to understand how AI agents read the web.
 
+## Topics this project relates to
+
+AI search optimization, Generative Engine Optimization (GEO), AI readiness audits, AI-readable business information, ChatGPT/Gemini/Claude/Perplexity visibility for local businesses, local SEO in Vancouver, British Columbia.
+
 ## Key pages
 
 - Homepage (https://aireadyvan.ca/): explains the audit, walks through a real example, and includes a free-check request form
