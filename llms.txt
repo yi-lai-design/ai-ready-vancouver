@@ -19,6 +19,11 @@ AI search optimization, Generative Engine Optimization (GEO), AI readiness audit
 - Homepage (https://aireadyvan.ca/): explains the audit, walks through a real example, and includes a free-check request form
 - AI discoverability guide (https://aireadyvan.ca/ai-discoverability-guide/): a free, general-purpose technical checklist for making any website discoverable by AI assistants and AI search crawlers, not specific to Vancouver
 - AI readiness Vancouver (https://aireadyvan.ca/ai-readiness-vancouver/): explains what "AI readiness" means, why it's distinct from local SEO, and why it matters for Vancouver businesses specifically
+- AI search optimization Vancouver (https://aireadyvan.ca/ai-search-optimization-vancouver/): what AI search optimization covers and how ChatGPT, Gemini, Perplexity, and Claude each source answers differently
+- GEO Vancouver (https://aireadyvan.ca/geo-vancouver/): explains Generative Engine Optimization, how it differs from SEO and AEO, and what makes content more citable in AI-generated answers
+- ChatGPT optimization Vancouver (https://aireadyvan.ca/chatgpt-optimization-vancouver/): explains OpenAI's three real crawlers (GPTBot, OAI-SearchBot, ChatGPT-User) and what each one means for a business site
+- AI SEO Vancouver (https://aireadyvan.ca/ai-seo-vancouver/): a combined checklist covering both classic SEO and AI readiness side by side
+- AI audit Vancouver (https://aireadyvan.ca/ai-audit-vancouver/): explains exactly what happens during the free audit process and what the report contains
 - Contact section (https://aireadyvan.ca/#contact): businesses can request their own free AI-readiness check
 - Full page content (https://aireadyvan.ca/llms-full.txt): complete plain-text version of the homepage, including the 4 real checks, current audit stats, and full FAQ
 

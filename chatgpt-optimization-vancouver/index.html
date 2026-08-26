@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChatGPT Optimization for Vancouver Businesses</title>
+<meta name="description" content="How ChatGPT actually finds and reads business websites — its three real crawlers, what search mode changes, and what makes a page more likely to get recommended.">
+<link rel="canonical" href="https://aireadyvan.ca/chatgpt-optimization-vancouver/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%87%A8%F0%9F%87%A6%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI Ready Vancouver">
+<meta property="og:title" content="ChatGPT Optimization for Vancouver Businesses">
+<meta property="og:description" content="How ChatGPT actually finds and reads business websites, and what makes a page more likely to get recommended.">
+<meta property="og:url" content="https://aireadyvan.ca/chatgpt-optimization-vancouver/">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ChatGPT Optimization for Vancouver Businesses">
+<meta name="twitter:description" content="How ChatGPT actually finds and reads business websites, and what makes a page more likely to get recommended.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "AI Ready Vancouver", "item": "https://aireadyvan.ca/" },
+    { "@type": "ListItem", "position": 2, "name": "ChatGPT Optimization Vancouver", "item": "https://aireadyvan.ca/chatgpt-optimization-vancouver/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is GPTBot?", "acceptedAnswer": { "@type": "Answer", "text": "GPTBot is OpenAI's crawler used to gather content for training future models. Blocking it in robots.txt opts your site out of that training data, but does not affect ChatGPT's live search or browsing features." } },
+    { "@type": "Question", "name": "What is OAI-SearchBot?", "acceptedAnswer": { "@type": "Answer", "text": "OAI-SearchBot is the crawler behind ChatGPT's search index — the one that matters most for showing up when someone asks ChatGPT to search the web for something. It needs to be allowed in robots.txt for your site to appear in ChatGPT search results." } },
+    { "@type": "Question", "name": "What is ChatGPT-User?", "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT-User is the agent that fetches a page live, in real time, when a user explicitly asks ChatGPT to look at a specific URL or browse for current information. It reads whatever is actually on the page at that moment." } },
+    { "@type": "Question", "name": "Can I guarantee ChatGPT will recommend my business?", "acceptedAnswer": { "@type": "Answer", "text": "No. Nothing can guarantee that, and any offer that promises it should be treated skeptically. What you can control is whether your site is actually readable and correctly understood once ChatGPT does look at it." } }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="bar">
+    <a class="wordmark" href="/"><span class="dot"></span>AI Ready</a>
+    <nav class="links">
+      <a href="#how-it-finds">How ChatGPT finds you</a>
+      <a href="#what-helps">What actually helps</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn solid" href="/#contact">Free check</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="blob top"></div>
+  <div class="wrap inner">
+    <span class="pill" style="--ai-c:#10a37f"><span class="icon icon-sm arrow">forum</span> ChatGPT specifically</span>
+    <h1 class="two-tone">
+      <span class="l1">ChatGPT optimization</span>
+      <span class="l2">for Vancouver businesses</span>
+    </h1>
+    <p class="question">How ChatGPT actually finds and reads business websites — and what makes a page more likely to get recommended.</p>
+    <div class="cta-row">
+      <a class="btn solid" href="/#contact">Get your free AI readiness check</a>
+      <a class="btn outline" href="#how-it-finds">How does it work?</a>
+    </div>
+  </div>
+</div>
+
+<section class="tight reveal" id="how-it-finds">
+  <div class="wrap article-body">
+    <h2>ChatGPT uses three different crawlers, not one</h2>
+    <p class="lede">It's easy to think of "ChatGPT" as one thing looking at your site. In practice, OpenAI operates three separate, named crawlers, and each does a different job. Knowing which one matters for your situation changes what's actually worth fixing.</p>
+    <p><strong>GPTBot</strong> gathers content for training future models. Allowing or blocking it in <code>robots.txt</code> affects whether your content becomes part of that future training data — it has nothing to do with whether ChatGPT can find you today.</p>
+    <p><strong>OAI-SearchBot</strong> is what powers ChatGPT's search feature — the one that matters most for a customer asking ChatGPT to search the web for a business like yours. If this is blocked, you won't show up in ChatGPT search results at all, regardless of how good your site is.</p>
+    <p><strong>ChatGPT-User</strong> fetches a page live, in real time, whenever someone explicitly asks ChatGPT to look at a specific site or check current information. This is the one that reads your actual page content in the moment — the same reason a stable, machine-readable page matters more than a polished-looking one.</p>
+  </div>
+</section>
+
+<section class="tight reveal" id="what-helps">
+  <div class="wrap">
+    <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">checklist</span>What actually helps</span></div>
+    <h2 class="two-tone"><span class="l1">Four things</span><span class="l2">worth getting right</span></h2>
+    <div class="checks">
+      <div class="check">
+        <span class="num icon">smart_toy</span>
+        <h3>Allow OAI-SearchBot</h3>
+        <p>Explicitly allow it in <code>robots.txt</code> — a plain wildcard allow already covers it, but naming it removes any ambiguity.</p>
+      </div>
+      <div class="check">
+        <span class="num icon">description</span>
+        <h3>State what you do, plainly</h3>
+        <p>A short, factual summary (an llms.txt file or structured data) beats a page that only implies your services through design.</p>
+      </div>
+      <div class="check">
+        <span class="num icon">push_pin</span>
+        <h3>Keep the page stable</h3>
+        <p>A live fetch reads what's actually rendered — a page that shifts content around or hides it behind JavaScript risks being misread.</p>
+      </div>
+      <div class="check">
+        <span class="num icon">event_available</span>
+        <h3>Give it an action</h3>
+        <p>A real way to book or request a quote, not just a phone number, gives ChatGPT something concrete to point a user toward.</p>
+      </div>
+    </div>
+    <p class="cite-line">These are the same 4 checks behind the <a href="/ai-readiness-vancouver/">AI Ready Score</a> — see the full technical version in the <a href="/ai-discoverability-guide/">AI discoverability guide</a>.</p>
+  </div>
+</section>
+
+<section class="reveal" id="faq">
+  <div class="wrap">
+    <div class="eyebrow"><span class="pill"><span class="icon icon-sm arrow">help</span>FAQ</span></div>
+    <h2 class="two-tone"><span class="l1">Questions</span><span class="l2">you might be asking</span></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary><span>What is GPTBot?</span><span class="plus"></span></summary>
+        <div class="a">GPTBot is OpenAI's crawler used to gather content for training future models. Blocking it in robots.txt opts your site out of that training data, but does not affect ChatGPT's live search or browsing features.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span>What is OAI-SearchBot?</span><span class="plus"></span></summary>
+        <div class="a">OAI-SearchBot is the crawler behind ChatGPT's search index — the one that matters most for showing up when someone asks ChatGPT to search the web for something. It needs to be allowed in robots.txt for your site to appear in ChatGPT search results.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span>What is ChatGPT-User?</span><span class="plus"></span></summary>
+        <div class="a">ChatGPT-User is the agent that fetches a page live, in real time, when a user explicitly asks ChatGPT to look at a specific URL or browse for current information. It reads whatever is actually on the page at that moment.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span>Can I guarantee ChatGPT will recommend my business?</span><span class="plus"></span></summary>
+        <div class="a">No. Nothing can guarantee that, and any offer that promises it should be treated skeptically. What you can control is whether your site is actually readable and correctly understood once ChatGPT does look at it.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta reveal" id="contact">
+  <div class="blob cta"></div>
+  <div class="wrap">
+    <h2 class="two-tone"><span class="l1">See where your site</span><span class="l2">actually stands</span></h2>
+    <p class="section-sub" style="margin-bottom: 8px;">Free, plain-English, no obligation. We check your site against the same 4 checks and send you the real result.</p>
+    <a class="btn solid" href="/#contact" style="margin-top: 20px;">Get your free AI readiness check<span class="icon icon-md">arrow_forward</span></a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand-col">
+      <a class="wordmark" href="/"><span class="dot flag" aria-hidden="true">🇨🇦</span>AI Ready</a>
+      <p>A free, independent project checking whether Vancouver's best-reviewed businesses can be read by AI.</p>
+      <p class="made-in">Made with intention in Vancouver, Canada.</p>
+    </div>
+    <div class="col">
+      <h4>This page</h4>
+      <a href="#how-it-finds">How ChatGPT finds you</a>
+      <a href="#what-helps">What actually helps</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="col">
+      <h4>Get in touch</h4>
+      <a href="/#contact">Get your free check</a>
+      <a href="/">Back to homepage</a>
+    </div>
+    <div class="col">
+      <h4>Resources</h4>
+      <a href="/ai-discoverability-guide/">AI discoverability guide</a>
+      <a href="/ai-search-optimization-vancouver/">AI search optimization</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const siteHeader = document.querySelector('header.top');
+  if (siteHeader) {
+    const SHRINK_RANGE = 120;
+    let ticking = false;
+    const applyProgress = () => {
+      const sp = Math.min(Math.max(window.scrollY / SHRINK_RANGE, 0), 1);
+      siteHeader.style.setProperty('--sp', sp.toFixed(3));
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const read = scrollable > 0 ? Math.min(Math.max(window.scrollY / scrollable, 0), 1) : 0;
+      siteHeader.style.setProperty('--progress', (read * 100).toFixed(2) + '%');
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (!ticking) { requestAnimationFrame(applyProgress); ticking = true; }
+    };
+    applyProgress();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+      revealEls.forEach((el) => el.classList.add('in'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      revealEls.forEach((el) => io.observe(el));
+    }
+  }
+</script>
+
+</body>
+</html>
