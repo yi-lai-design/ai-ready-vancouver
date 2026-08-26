@@ -1,0 +1,25 @@
+{
+  "studyDate": "2026-08-26",
+  "totalBusinesses": 50,
+  "totalIndustries": 10,
+  "businessesPerIndustry": 5,
+  "failedAtLeastOne": 50,
+  "checks": [
+    { "id": "summary", "label": "AI-readable summary", "shortLabel": "Summary", "failed": 49, "total": 50 },
+    { "id": "contact", "label": "Machine-findable contact info", "shortLabel": "Contact info", "failed": 12, "total": 50 },
+    { "id": "action", "label": "AI-actionable booking", "shortLabel": "Bookable action", "failed": 50, "total": 50 }
+  ],
+  "industries": [
+    { "name": "Fitness studios", "contactPass": 1, "total": 5 },
+    { "name": "Restaurants & cafes", "contactPass": 3, "total": 5 },
+    { "name": "Dentists", "contactPass": 3, "total": 5 },
+    { "name": "Auto repair", "contactPass": 3, "total": 5 },
+    { "name": "Accountants", "contactPass": 3, "total": 5 },
+    { "name": "Plumbers & HVAC", "contactPass": 5, "total": 5 },
+    { "name": "Lawyers", "contactPass": 5, "total": 5 },
+    { "name": "Salons & spas", "contactPass": 5, "total": 5 },
+    { "name": "Real estate agents", "contactPass": 5, "total": 5 },
+    { "name": "Contractors", "contactPass": 5, "total": 5 }
+  ],
+  "methodologyNote": "A third check (layout stability) is part of the site's real 4-check framework but is excluded from this published dataset: it requires a real browser (Lighthouse) to measure honestly, and the automated, at-scale method used for this study produced contradictory results in two independent batches (100% pass in one, 100% fail in another) that reflect an artifact of HTML-to-text conversion, not real page behavior. Figures here cover the 3 checks reliably measurable at this scale."
+}

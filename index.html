@@ -490,7 +490,7 @@
 <body>
 <header class="top">
   <div class="bar">
-    <span class="wordmark">AI Ready</span>
+    <span class="wordmark"><span class="dot"></span>AI Ready</span>
     <nav class="links">
       <a href="#how" data-i18n="nav.how">How it works</a>
       <a href="#example" data-i18n="nav.example">A real example</a>
@@ -635,7 +635,7 @@
   <div class="wrap">
     <div class="eyebrow"><span class="pill" data-i18n="why.eyebrow"><span class="icon icon-sm arrow">insights</span>Why it actually matters</span></div>
     <h2 class="two-tone" data-i18n="why.h2"><span class="l1">This isn't just a score</span><span class="l2">It's who gets found</span></h2>
-    <p class="section-sub" style="margin-bottom:32px;" data-i18n="why.sub">28 out of 28. That's how many well-reviewed Vancouver businesses we checked failed at least part of this.</p>
+    <p class="section-sub" style="margin-bottom:32px;" data-i18n="why.sub">50 out of 50. That's how many well-reviewed Vancouver businesses we checked failed at least part of this.</p>
     <div class="before-after">
       <div class="ba-card fail">
         <span class="tag" data-i18n="why.failtag">Fails the check</span>
@@ -653,6 +653,12 @@
           <li><span class="ic icon icon-md">check_circle</span><span data-i18n="why.pass3">Your real reviews reach the tools customers use to decide</span></li>
         </ul>
       </div>
+    </div>
+    <div class="chart-card" style="margin-top:32px;">
+      <h3 data-i18n="why.chart.title">Failure rate per check, across all 50</h3>
+      <p class="chart-caption" data-i18n="why.chart.caption">From the full Vancouver AI Readiness Report</p>
+      <div class="chart-body" data-chart="checks"></div>
+      <p class="cite-line" style="text-align:center; margin-top:20px;"><a href="/vancouver-ai-readiness-report/" data-i18n="why.chart.link">See the full report, broken down by industry →</a></p>
     </div>
   </div>
 </section>
@@ -897,7 +903,11 @@
   }
 </script>
 
+<script src="/assets/d3.min.js"></script>
+<script src="/assets/charts.js"></script>
 <script>
+  AIReadyCharts.renderAll();
+
   const siteHeader = document.querySelector('header.top');
   if (siteHeader) {
     const SHRINK_RANGE = 120; // px of scroll over which the header fully compresses
@@ -996,7 +1006,7 @@
       'checks.cite': 'One of the sources: <a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring" target="_blank" rel="noopener">Chrome for Developers, Lighthouse Agentic Browsing scoring</a>.',
       'why.eyebrow': '<span class="icon icon-sm arrow">insights</span>Why it actually matters',
       'why.h2': '<span class="l1">This isn\'t just a score</span><span class="l2">It\'s who gets found</span>',
-      'why.sub': "28 out of 28. That's how many well-reviewed Vancouver businesses we checked failed at least part of this.",
+      'why.sub': "50 out of 50. That's how many well-reviewed Vancouver businesses we checked failed at least part of this.",
       'why.failtag': 'Fails the check',
       'why.fail1': "An AI assistant can't confirm your hours, services, or price",
       'why.fail2': 'You get skipped when someone asks "who\'s the best near me"',
@@ -1005,6 +1015,9 @@
       'why.pass1': 'An AI assistant can read your hours, services, and booking info',
       'why.pass2': 'You show up when someone asks an AI to compare options',
       'why.pass3': 'Your real reviews reach the tools customers use to decide',
+      'why.chart.title': 'Failure rate per check, across all 50',
+      'why.chart.caption': 'From the full Vancouver AI Readiness Report',
+      'why.chart.link': 'See the full report, broken down by industry →',
       'faq.eyebrow': '<span class="icon icon-sm arrow">help</span>FAQ',
       'faq.h2': '<span class="l1">Questions</span><span class="l2">you might be asking</span>',
       'faq.q1': 'Why are you doing this?',
@@ -1102,7 +1115,7 @@
       'checks.cite': 'Une des sources : <a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring" target="_blank" rel="noopener">Chrome for Developers, Lighthouse Agentic Browsing scoring</a>.',
       'why.eyebrow': '<span class="icon icon-sm arrow">insights</span>Pourquoi c\'est vraiment important',
       'why.h2': '<span class="l1">Ce n\'est pas juste un score</span><span class="l2">C\'est qui se fait trouver</span>',
-      'why.sub': "28 sur 28. C'est le nombre d'entreprises de Vancouver bien évaluées qu'on a vérifiées qui ont échoué au moins une partie de ce test.",
+      'why.sub': "50 sur 50. C'est le nombre d'entreprises de Vancouver bien évaluées qu'on a vérifiées qui ont échoué au moins une partie de ce test.",
       'why.failtag': 'Échoue à la vérification',
       'why.fail1': "Un assistant IA ne peut pas confirmer vos heures, vos services ou vos prix",
       'why.fail2': "Vous êtes ignoré quand quelqu'un demande « qui est le meilleur près de moi »",
@@ -1111,6 +1124,9 @@
       'why.pass1': 'Un assistant IA peut lire vos heures, vos services et vos infos de réservation',
       'why.pass2': "Vous apparaissez quand quelqu'un demande à une IA de comparer des options",
       'why.pass3': 'Vos vrais avis atteignent les outils que les clients utilisent pour décider',
+      'why.chart.title': 'Taux d\'échec par vérification, sur les 50',
+      'why.chart.caption': 'Extrait du rapport complet sur la préparation IA à Vancouver',
+      'why.chart.link': 'Voir le rapport complet, par industrie →',
       'faq.eyebrow': '<span class="icon icon-sm arrow">help</span>FAQ',
       'faq.h2': '<span class="l1">Des questions</span><span class="l2">que vous vous posez peut-être</span>',
       'faq.q1': 'Pourquoi faites-vous ça?',

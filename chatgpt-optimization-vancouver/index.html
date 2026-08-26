@@ -79,6 +79,14 @@
     <p><strong>OAI-SearchBot</strong> is what powers ChatGPT's search feature — the one that matters most for a customer asking ChatGPT to search the web for a business like yours. If this is blocked, you won't show up in ChatGPT search results at all, regardless of how good your site is.</p>
     <p><strong>ChatGPT-User</strong> fetches a page live, in real time, whenever someone explicitly asks ChatGPT to look at a specific site or check current information. This is the one that reads your actual page content in the moment — the same reason a stable, machine-readable page matters more than a polished-looking one.</p>
   </div>
+  <div class="wrap">
+    <div class="chart-card" style="margin-top:8px;">
+      <h3>What ChatGPT-User finds when it actually looks</h3>
+      <p class="chart-caption">AI-actionable booking, across 50 real Vancouver businesses</p>
+      <div class="chart-body" data-chart="gauge" data-checks="action"></div>
+      <p class="cite-line" style="text-align:center; margin-top:20px;"><a href="/vancouver-ai-readiness-report/">See the full report, broken down by industry →</a></p>
+    </div>
+  </div>
 </section>
 
 <section class="tight reveal" id="what-helps">
@@ -172,7 +180,11 @@
   </div>
 </footer>
 
+<script src="/assets/d3.min.js"></script>
+<script src="/assets/charts.js"></script>
 <script>
+  AIReadyCharts.renderAll();
+
   const siteHeader = document.querySelector('header.top');
   if (siteHeader) {
     const SHRINK_RANGE = 120;

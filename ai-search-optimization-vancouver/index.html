@@ -86,6 +86,14 @@
     <p>It sits downstream of traditional SEO. SEO gets a page crawled and ranked. AI search optimization is about what happens after that: whether an AI system that has found your page can actually extract what your business does, where it's located, and how someone can act on that — accurately enough to recommend you by name.</p>
     <p>A business can do everything right by classic SEO standards — fast page, clean structure, strong backlinks — and still be functionally invisible to an AI assistant reading the same page, if that page never states its services in a way a machine can parse.</p>
   </div>
+  <div class="wrap">
+    <div class="chart-card" style="margin-top:8px;">
+      <h3>Where AI search optimization actually breaks down</h3>
+      <p class="chart-caption">Failure rate per check, across 50 real Vancouver businesses</p>
+      <div class="chart-body" data-chart="gauge" data-checks="summary,contact,action"></div>
+      <p class="cite-line" style="text-align:center; margin-top:20px;"><a href="/vancouver-ai-readiness-report/">See the full report, broken down by industry →</a></p>
+    </div>
+  </div>
 </section>
 
 <section class="tight reveal" id="surfaces">
@@ -176,7 +184,11 @@
   </div>
 </footer>
 
+<script src="/assets/d3.min.js"></script>
+<script src="/assets/charts.js"></script>
 <script>
+  AIReadyCharts.renderAll();
+
   const siteHeader = document.querySelector('header.top');
   if (siteHeader) {
     const SHRINK_RANGE = 120;

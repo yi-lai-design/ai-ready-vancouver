@@ -86,6 +86,14 @@
     <p>The term originated in academic research studying how content characteristics affect visibility inside AI-generated answers, and has since become a broader shorthand for optimizing content for AI search generally. The underlying idea holds either way: a search engine ranks pages, but a generative engine synthesizes an answer out of several sources — and it has to choose which sources to actually use.</p>
     <p>That's a different competition than ranking #1. A page can be the top Google result and still not get pulled into a generated answer if its content isn't structured in a way that's easy to extract and cite accurately.</p>
   </div>
+  <div class="wrap">
+    <div class="chart-card" style="margin-top:8px;">
+      <h3>Citability starts with machine-findable basics</h3>
+      <p class="chart-caption">Share of 5 audited businesses per industry with a real <code>tel:</code> link or structured contact data</p>
+      <div class="chart-body" data-chart="industry-dots"></div>
+      <p class="cite-line" style="text-align:center; margin-top:20px;"><a href="/vancouver-ai-readiness-report/">See the full report →</a></p>
+    </div>
+  </div>
 </section>
 
 <section class="tight reveal" id="what-works">
@@ -176,7 +184,11 @@
   </div>
 </footer>
 
+<script src="/assets/d3.min.js"></script>
+<script src="/assets/charts.js"></script>
 <script>
+  AIReadyCharts.renderAll();
+
   const siteHeader = document.querySelector('header.top');
   if (siteHeader) {
     const SHRINK_RANGE = 120;

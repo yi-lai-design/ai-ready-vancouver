@@ -41,7 +41,7 @@ These are real checks, not something we invented. Search engines have checked pa
 
 ## Why it matters
 
-28 out of 28. That's how many well-reviewed Vancouver businesses we checked failed at least part of this.
+50 out of 50. That's how many well-reviewed Vancouver businesses we checked, across 10 industries, failed at least part of this. Full breakdown by check and by industry: https://aireadyvan.ca/vancouver-ai-readiness-report/
 
 Fails the check: an AI assistant can't confirm your hours, services, or price. You get skipped when someone asks "who's the best near me." A five-star reputation never reaches the tools people now ask first.
 

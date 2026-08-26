@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Readiness Vancouver | What It Means & How to Check Yours</title>
-<meta name="description" content="What 'AI readiness' actually means for a Vancouver business, why it's different from SEO, and how to check yours for free — from the independent project that already audited 28 real local businesses.">
+<meta name="description" content="What 'AI readiness' actually means for a Vancouver business, why it's different from SEO, and how to check yours for free — from the independent project that already audited 50 real local businesses.">
 <link rel="canonical" href="https://aireadyvan.ca/ai-readiness-vancouver/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%87%A8%F0%9F%87%A6%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="article">
@@ -85,7 +85,7 @@
     <h2>What "AI readiness" means</h2>
     <p class="lede"><strong>AI readiness is whether a website can be found, correctly understood, and acted on by AI assistants</strong> — ChatGPT, Gemini, Claude, Perplexity, and the AI features now built into Google itself. It's a different, newer question than the one SEO answers.</p>
     <p>SEO asks: can a search engine rank this page? AI readiness asks something further downstream: once an AI system has your page in front of it, can it actually tell what your business does, where you are, what you charge, and how someone books you — well enough to recommend you by name?</p>
-    <p>Those two things are more independent than most business owners expect. We ran a real audit on 28 well-reviewed Vancouver businesses, and every single one failed at least one AI readiness check — including several with excellent SEO. A site can rank first on Google and still be functionally invisible to an AI assistant reading it.</p>
+    <p>Those two things are more independent than most business owners expect. We ran a real audit on 50 well-reviewed Vancouver businesses across 10 industries, and every single one failed at least one AI readiness check — including several with excellent SEO. A site can rank first on Google and still be functionally invisible to an AI assistant reading it.</p>
   </div>
 </section>
 
@@ -125,7 +125,15 @@
     <h2>Why this matters for a Vancouver business specifically</h2>
     <p>Vancouver's economy runs on independent businesses — restaurants, contractors, clinics, salons, shops — competing hard for the same local customers. A five-star reputation built over years used to be enough to win that competition on Google. Increasingly, it isn't, because a growing share of that same search behaviour is happening inside an AI assistant instead of a search results page.</p>
     <p>When someone asks an AI assistant "who's a good plumber near me" or "what's the best-reviewed dentist in East Van," the assistant can only recommend businesses whose websites it can actually parse. A five-star rating that never reaches the tools people now ask first might as well not exist to that customer.</p>
-    <p>This project exists because that gap is measurable, not theoretical: we checked 28 real, well-reviewed Vancouver businesses against the 4 checks above, and 28 out of 28 failed at least one of them.</p>
+    <p>This project exists because that gap is measurable, not theoretical: we checked 50 real, well-reviewed Vancouver businesses across 10 industries against the checks above, and 50 out of 50 failed at least one of them. It varies sharply by trade — some industries have machine-findable contact info nearly everywhere, others almost nowhere.</p>
+  </div>
+  <div class="wrap">
+    <div class="chart-card" style="margin-top:8px;">
+      <h3>Machine-findable contact info, by industry</h3>
+      <p class="chart-caption">From the full Vancouver AI Readiness Report</p>
+      <div class="chart-body" data-chart="industry"></div>
+      <p class="cite-line" style="text-align:center; margin-top:20px;"><a href="/vancouver-ai-readiness-report/">See the full report →</a></p>
+    </div>
   </div>
 </section>
 
@@ -189,7 +197,11 @@
   </div>
 </footer>
 
+<script src="/assets/d3.min.js"></script>
+<script src="/assets/charts.js"></script>
 <script>
+  AIReadyCharts.renderAll();
+
   const siteHeader = document.querySelector('header.top');
   if (siteHeader) {
     const SHRINK_RANGE = 120;

@@ -134,6 +134,12 @@
         <p>The report is free to use however you want. There's no upsell built into it.</p>
       </div>
     </div>
+    <div class="chart-card" style="margin-top:32px;">
+      <h3>The one check where results actually vary</h3>
+      <p class="chart-caption">Machine-findable contact info, across 50 real Vancouver businesses</p>
+      <div class="chart-body" data-chart="gauge" data-checks="contact"></div>
+      <p class="cite-line" style="text-align:center; margin-top:20px;"><a href="/vancouver-ai-readiness-report/">See the full report, broken down by industry →</a></p>
+    </div>
   </div>
 </section>
 
@@ -198,7 +204,11 @@
   </div>
 </footer>
 
+<script src="/assets/d3.min.js"></script>
+<script src="/assets/charts.js"></script>
 <script>
+  AIReadyCharts.renderAll();
+
   const siteHeader = document.querySelector('header.top');
   if (siteHeader) {
     const SHRINK_RANGE = 120;

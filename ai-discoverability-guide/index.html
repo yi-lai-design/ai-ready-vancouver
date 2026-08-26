@@ -109,8 +109,16 @@
 
 <section class="tight reveal">
   <div class="wrap article-body">
-    <p class="lede">57.5% of web traffic in 2026 is automated, not people — bots, crawlers, and AI assistants (<a href="https://radar.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Radar</a>). When we ran these exact checks against 28 real, well-reviewed local businesses, every single one failed at least one of them. Most sites were built for people and search-engine crawlers. Almost none were built for the AI assistants a growing share of customers now ask first.</p>
+    <p class="lede">57.5% of web traffic in 2026 is automated, not people — bots, crawlers, and AI assistants (<a href="https://radar.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Radar</a>). When we ran these exact checks against 50 real, well-reviewed local businesses across 10 industries, every single one failed at least one of them. Most sites were built for people and search-engine crawlers. Almost none were built for the AI assistants a growing share of customers now ask first.</p>
     <p>"AI discoverability" is the practice of making sure a website can actually be <strong>found, read, and correctly understood</strong> by AI systems — not just ranked by Google. It's a different, newer problem than SEO, and most of the fixes are small.</p>
+  </div>
+  <div class="wrap">
+    <div class="chart-card" style="margin-top:8px;">
+      <h3>Failure rate per check, across 50 real Vancouver businesses</h3>
+      <p class="chart-caption">From the full Vancouver AI Readiness Report</p>
+      <div class="chart-body" data-chart="checks"></div>
+      <p class="cite-line" style="text-align:center; margin-top:20px;"><a href="/vancouver-ai-readiness-report/">See the full report, broken down by industry →</a></p>
+    </div>
   </div>
 </section>
 
@@ -303,7 +311,11 @@ Allow: /</code></pre>
   </div>
 </footer>
 
+<script src="/assets/d3.min.js"></script>
+<script src="/assets/charts.js"></script>
 <script>
+  AIReadyCharts.renderAll();
+
   const siteHeader = document.querySelector('header.top');
   if (siteHeader) {
     const SHRINK_RANGE = 120;
