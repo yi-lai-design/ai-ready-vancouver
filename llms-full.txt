@@ -1,0 +1,70 @@
+# AI Ready Vancouver — full page content
+
+> This is a plain-text mirror of https://aireadyvan.ca/ for AI assistants and agents. It matches the live page; see the HTML page for the interactive version (charts, form, French toggle).
+
+## Will AI recommend your Vancouver business?
+
+Find out with one free, honest check.
+
+For context: 57.5% of web traffic in 2026 is automated (bots, crawlers, AI), not people, per Cloudflare Radar. 53%+ of web traffic is bots, up from 51% last year (Imperva 2026 Bad Bot Report). 68% of Google searches now end without a single click to any website (Search Engine Land, 2026).
+
+## What is AI Ready Vancouver?
+
+AI Ready Vancouver is a free, independent project that checks whether Vancouver businesses can be found, understood, and recommended by AI assistants like ChatGPT, Gemini, Claude, and Perplexity, not just traditional search engines. We run the same real checks on your site and send you a plain-English report.
+
+Built and operated by two tech professionals based in Vancouver, Canada, as a hands-on way to understand how AI agents read the web. It is not a sales pitch — the report is free to use with this project, a competitor, or nobody at all.
+
+## How the free check works
+
+1. You fill in the form: your business name, website, and email. Takes under a minute, nothing to install.
+2. We run the AI audit: real checks for whether AI assistants like ChatGPT, Gemini, and Claude can actually find and read your page. No guessing involved.
+3. We send you the result: your real score, in plain English, and what it would take to fix. No account, no software to buy.
+
+## One real example: perfect SEO, invisible to AI
+
+A Vancouver auto repair shop. 4.7 stars, close to 300 reviews, independently owned.
+
+Everything else checks out: Performance 49, Accessibility 87, Best Practices 96, SEO 100 (perfect score).
+
+AI Readiness checks passed: 0 out of 2.
+
+In plain terms: that gap is the same 57.5% / 42.5% automated/human split from the top of this page. A great SEO score doesn't change whether AI search can actually read the page.
+
+## The 4 real checks (what we call the AI Ready Score)
+
+These are real checks, not something we invented. Search engines have checked page speed and usability for years. In 2026 a new question got added: can an AI actually use this page? We call how many of these four checks a site passes its AI Ready Score, counted like a home inspection, not a percentage. One source: Chrome for Developers, Lighthouse Agentic Browsing scoring (https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring).
+
+1. A summary AI can read — a small file (such as llms.txt) or structured data telling AI tools what the business does, instead of making them guess.
+2. Buttons a computer can find — clear, machine-readable labels behind the scenes, so phone number and hours are easy to find (not just present visually).
+3. A page that doesn't jump around — content that stays put (layout stability), so nothing confuses a computer reading it.
+4. Booking without the clicking — a newer way for an AI to get a quote or book directly, not just a phone number to call.
+
+## Why it matters
+
+28 out of 28. That's how many well-reviewed Vancouver businesses we checked failed at least part of this.
+
+Fails the check: an AI assistant can't confirm your hours, services, or price. You get skipped when someone asks "who's the best near me." A five-star reputation never reaches the tools people now ask first.
+
+Passes the check: an AI assistant can read your hours, services, and booking info. You show up when someone asks an AI to compare options. Your real reviews reach the tools customers use to decide.
+
+## FAQ
+
+**Why are you doing this?**
+My partner and I are tech professionals, and the best way we know to actually understand a shift like this is to do the work, not just read about it. Running these checks for free, on real businesses instead of theory, is how we're learning.
+
+**Is this actually free?**
+Yes, no card, no catch. This project is brand new, so right now every check is free while we're still getting it off the ground. That might not last forever, but it will for you.
+
+**Do I have to hire you to fix anything?**
+No. The report is yours to use with us, someone else, or nobody at all.
+
+**Is this the same as SEO?**
+Related, but different. SEO helps Google rank your page. This checks something newer: whether an AI assistant reading your page can actually understand it well enough to recommend you. A site can have perfect SEO and still fail every one of these checks.
+
+## Request a free check
+
+Businesses can request a free AI readiness check at https://aireadyvan.ca/#contact by submitting: business name, website, and email (a note is optional). Response within 24 hours. No sales pitch, no obligation.
+
+## Contact
+
+hello@aireadyvan.ca

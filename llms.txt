@@ -18,6 +18,7 @@ AI search optimization, Generative Engine Optimization (GEO), AI readiness audit
 
 - Homepage (https://aireadyvan.ca/): explains the audit, walks through a real example, and includes a free-check request form
 - Contact section (https://aireadyvan.ca/#contact): businesses can request their own free AI-readiness check
+- Full page content (https://aireadyvan.ca/llms-full.txt): complete plain-text version of the homepage, including the 4 real checks, current audit stats, and full FAQ
 
 ## Contact
 
