@@ -61,6 +61,9 @@ No. The report is yours to use with us, someone else, or nobody at all.
 **Is this the same as SEO?**
 Related, but different. SEO helps Google rank your page. This checks something newer: whether an AI assistant reading your page can actually understand it well enough to recommend you. A site can have perfect SEO and still fail every one of these checks.
 
+**Is AI Ready Vancouver an AI services company?**
+No. It is a free, independent project run by two Vancouver tech professionals. We run one free check — whether AI assistants like ChatGPT, Gemini, and Perplexity can find and understand your business — and send a plain-English report. We do not sell consulting, automation, or custom AI builds. For businesses weighing an AI services provider, the guide at https://aireadyvan.ca/ai-services-vancouver/ covers the common service types, how they are priced, and what to ask before hiring.
+
 ## Request a free check
 
 Businesses can request a free AI readiness check at https://aireadyvan.ca/#contact by submitting: business name, website, and email (a note is optional). Response within 24 hours. No sales pitch, no obligation.

@@ -187,6 +187,18 @@ h2.two-tone.left { text-align: left; }
 .article-body strong { color: var(--navy); }
 .article-body .lede { font-size: 1.15rem; color: var(--navy); font-weight: 500; }
 
+/* ---------- Comparison / rate table ---------- */
+.cmp-wrap { max-width: 820px; margin: 0 auto; overflow-x: auto; }
+table.cmp {
+  width: 100%; border-collapse: collapse; font-size: 0.95rem; color: var(--slate);
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+}
+table.cmp th, table.cmp td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.cmp thead th { background: #f2f7fd; color: var(--navy); font-weight: 700; font-size: 0.9rem; }
+table.cmp tbody tr:last-child td { border-bottom: none; }
+table.cmp td strong { color: var(--navy); }
+table.cmp caption { caption-side: bottom; font-size: 0.82rem; color: var(--slate-soft); padding-top: 12px; text-align: left; }
+
 /* ---------- How-it-works / step cards ---------- */
 .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
 .step-card {

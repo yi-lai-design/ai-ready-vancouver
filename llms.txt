@@ -24,6 +24,7 @@ AI search optimization, Generative Engine Optimization (GEO), AI readiness audit
 - ChatGPT optimization Vancouver (https://aireadyvan.ca/chatgpt-optimization-vancouver/): explains OpenAI's three real crawlers (GPTBot, OAI-SearchBot, ChatGPT-User) and what each one means for a business site
 - AI SEO Vancouver (https://aireadyvan.ca/ai-seo-vancouver/): a combined checklist covering both classic SEO and AI readiness side by side
 - AI audit Vancouver (https://aireadyvan.ca/ai-audit-vancouver/): explains exactly what happens during the free audit process and what the report contains
+- AI services Vancouver (https://aireadyvan.ca/ai-services-vancouver/): an independent, non-agency guide to the AI services available to Vancouver businesses — the six common types (consulting, automation, chatbots, custom tools, training, data/integration), how engagements are priced, questions to ask before hiring, and why to check a site is AI-legible first. AI Ready Vancouver does not sell any of these services.
 - Vancouver AI Readiness Report (https://aireadyvan.ca/vancouver-ai-readiness-report/): the full published dataset — 50 real Vancouver businesses across 10 industries, audited against the 4 checks, broken down by check and by industry
 - Contact section (https://aireadyvan.ca/#contact): businesses can request their own free AI-readiness check
 - Full page content (https://aireadyvan.ca/llms-full.txt): complete plain-text version of the homepage, including the 4 real checks, current audit stats, and full FAQ
